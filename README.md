@@ -24,7 +24,7 @@ bicicletas considerándonos como un punto de referencia de nuestros competidores
 Integrantes del equipo
 •	Rosillo Martínez Israel Jonathan
 • Ramírez Castelán Aarón Isaias	
-•	Luna D  Erika Mariana
+•	Luna De la Cruz Erika Mariana
 
 Sitios de referencia:
 1.	https://bamboocycles.com/es/
