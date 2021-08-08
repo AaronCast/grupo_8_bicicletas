@@ -37,3 +37,5 @@ Sitios de referencia:
 	Es una página de referencia en el Sur Este de México que provee diferentes marcas de bicicletas.
 5.	https://www.werbikes.mx/
 	Cuenta en su página con un amplio surtido de bicicletas de gama media y alta.
+
+Link Trello:https://trello.com/b/1Sjq9d2u/e-commerce
