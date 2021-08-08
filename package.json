@@ -1,0 +1,25 @@
+{
+  "name": "equipo_8_rodada",
+  "version": "1.0.0",
+  "description": "",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node app.js",
+    "dev": "nodemon app.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/AaronCast/grupo_8_bicicletas.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/AaronCast/grupo_8_bicicletas/issues"
+  },
+  "homepage": "https://github.com/AaronCast/grupo_8_bicicletas#readme",
+  "dependencies": {
+    "express": "^4.17.1",
+    "nodemon": "^2.0.12"
+  }
+}
