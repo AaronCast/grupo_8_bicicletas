@@ -10,6 +10,12 @@ app.get('/', (req, res) => {
 });
 
 
+/* ProductCar */
+app.get('/productdetail', (req, res) => {
+    res.sendFile(path.join(__dirname,'./views/productDetail.html'));
+});
+
+
 
 app.listen(3030, () => 
 console.log('Corriendo'));

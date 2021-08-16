@@ -1,0 +1,12 @@
+p.description{
+    display: block;
+}
+
+
+div.products{
+    display: none;
+}
+
+.main-article{
+    box-shadow: 0px 0px 10px rgb(100, 100, 100);
+}

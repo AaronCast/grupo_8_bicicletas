@@ -9,7 +9,7 @@ body{
 }
 
 nav.login{
-    background-color: #EEEEEE;
+    background-color: #6274752b;
 }
 
 ul.login-2{
@@ -26,12 +26,14 @@ ul.login-1{
 body{
     background-color: #faf9f9;
 }
+
 ul.login-1 li{
 
     margin: 0 15px;
 }
 img.banner{
     width: 100%;
+    margin-top: 10%;
 }
 
 div.bottom-header{
@@ -42,11 +44,13 @@ div.bottom-header{
 }
 
 div.bottom-header {
+    background-color: #6274752b;
     align-items: center;
     display: flex;
     flex-direction: row;
-    padding: 10px;
+    padding: 20px;
     justify-content: space-between;
+    background-image: url('/img/1back.jpg');
 }
 
 section.logo{
@@ -63,13 +67,19 @@ div.navbar input{
     border-radius: 10px;
     width: 90%;
     position: relative;
+    background-color: #e8e0e06b;
+}
+
+input::placeholder{
+    font-family: 'Atlas Grotesk Web Bold', sans-serif;
+    color:#474747
 }
 
 div.navbar i{
     position: absolute;
     color: #474747;
-    top: 44px;
-    right: 38px;
+    top: 35px;
+    right: 50px;
     z-index: 3;
 }
 
@@ -87,6 +97,9 @@ nav.product-list ul{
     list-style: none;
 }
 
+ul.login-1 i{
+    color: #fb9348 ;
+}
 nav.product-list ul li{
     margin-bottom: 5px;
 }
@@ -107,7 +120,12 @@ h4{
 .main-article{
     padding: 10px;
     width: 50%;
-    margin-bottom: 10%;
+    margin-top: 10px;
+    border-radius: 10px;
+}
+
+.main-article h3{
+    border-top: solid 1px #4747477a;
 }
 
 div.new-products{
@@ -115,6 +133,7 @@ div.new-products{
     flex-direction: row;
     display: flex;
     flex-wrap: wrap;
+    margin: 0px 10px;
 }
 
 h3{
@@ -247,4 +266,9 @@ ul.contact-list{
 
 ul.contact-list li{
     margin-bottom: 10px;
+}
+
+
+main div article:hover{ 
+    box-shadow: 0px 0px 10px rgb(100, 100, 100);
 }
