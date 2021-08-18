@@ -5,6 +5,11 @@ p.description{
     font-size: 90%;
 }
 
+h3{
+    color: #3ea23e;
+    font-size: 100%
+    mar
+}
 
 div.products{
     display: none;
@@ -46,7 +51,7 @@ div.model{
 }
 
 div.cost{
-    margin: 5% 4% 0px 10%;
+    margin: 5% 6% 120px 10%;
     display: flex;
     flex-direction: row;
 }
@@ -54,4 +59,39 @@ div.cost{
 section.buy-detail{
     display: flex;
     flex-direction: column;
+    margin-top: 5%;
+    align-items: flex-end;
+}
+
+p.discount{
+    font-family: 'Atlas Grotesk Web Bold';
+    color: crimson;
+    font-size: 128%
+}
+button.button-car{
+    font-family: 'Atlas Grotesk Web Bold';
+    background-color: #337CD3;
+    color: white;
+    border: solid;
+    height: 59px;
+    width: 146px;
+    border-radius: 16px;
+}
+
+div.caracteristics{
+    margin: 10px 0px 26px 39px;
+    text-align: left;
+    font-size: 13px;
+    font-family: 'Atlas Grotesk Web Bold';
+    color: #474747;
+}
+
+button.button-buy{
+    font-family: 'Atlas Grotesk Web Bold';
+    background-color: #3ea23e;
+    color: white;
+    border: solid;
+    height: 59px;
+    width: 146px;
+    border-radius: 16px;
 }

@@ -242,6 +242,35 @@ nav ul.info li{
     margin-bottom: 10px;
 }
 
+div.social-bar ul{
+    list-style: none;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+}
+
+div.social-bar ul li{
+    text-align: center;
+    margin: 0px 0px 0px 5px;
+    font-size: 30px;
+}
+
+div.social-bar a.rod-facebook{
+    color: #3b5998;
+}
+
+div.social-bar a.rod-twitter{
+    color: #337CD3;
+}
+div.social-bar a.rod-pinterest{
+    color: #dc1d38;
+}
+div.social-bar a.rod-instagram{
+    color: #981682;
+}
+
+
+
 div.contact{
     height: 187px;
 }
