@@ -11,11 +11,14 @@ app.use(express.static(publicPath));
 app.get('/', (req, res) => {
     res.sendFile(path.join(__dirname,'./views/index.html'));
 });
-/* Home page */
+/* Formulario Registro */
 app.get('/register', (req, res) => {
     res.sendFile(path.join(__dirname,'./views/register.html'));
 });
-
+/* Carrito de Compras */
+app.get('/productCart', (req, res) => {
+    res.sendFile(path.join(__dirname,'./views/productCart.html'));
+});
 
 app.listen(3030, () => 
 console.log('Corriendo'));
