@@ -10,7 +10,7 @@ app.get('/', (req, res) => {
 });
 
 
-/* ProductCar */
+/* ProductDetail */
 app.get('/productdetail', (req, res) => {
     res.sendFile(path.join(__dirname,'./views/productDetail.html'));
 });
@@ -18,6 +18,16 @@ app.get('/productdetail', (req, res) => {
 /* Login */
 app.get('/login', (req, res) => {
     res.sendFile(path.join(__dirname,'./views/login.html'));
+});
+
+/* Formulario Registro */
+app.get('/register', (req, res) => {
+    res.sendFile(path.join(__dirname,'./views/register.html'));
+});
+
+/* Carrito de Compras */
+app.get('/productCart', (req, res) => {
+    res.sendFile(path.join(__dirname,'./views/productCart.html'));
 });
 
 app.listen(3030, () => 
