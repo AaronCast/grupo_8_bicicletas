@@ -5,11 +5,11 @@
         <title>Rodadamx</title>
         <meta name= "viewport" content="width = device-width, initial-scale= 1">
         <link rel="stylesheet" href="/css/styles.css">
+        <link rel="stylesheet" href="/css/login.css">
         <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet"/>
         <link href="//db.onlinewebfonts.com/c/8d65e04904a1582f7e49f29c82eeda2d?family=Atlas+Grotesk+Web+Bold" rel="stylesheet" type="text/css"/>
         <link href="//db.onlinewebfonts.com/c/43372a4ce8dc3abbca31595815be7cf3?family=Atlas+Grotesk+Web+Light" rel="stylesheet" type="text/css"/>
     </head>
-
     <body>
         <header>
             <div class="top-header">
@@ -25,7 +25,7 @@
                     <ul class="login-1">
                         <li><a href = "#"><i class="fas fa-shopping-cart"></i></a>|</li>
                         <li><a href = "#"><i class="fas fa-sign-in-alt"></i></a>|</li>
-                        <li><a href = "/login"><i class="fas fa-portrait"></i></a>|</li>
+                        <li><a href = "#"><i class="fas fa-portrait"></i></a>|</li>
                     </ul>
                     <ul class="login-2">
                         <li><a href = "#">Mi carrito<i class="fas fa-shopping-cart"></i></a></li>
@@ -47,93 +47,23 @@
                         <li><a href="#"></a>Rebajas</li>
                     </ul>
                 </nav>
-                <div class="banner">
-                    <img src="/img/banner.jpg" alt="banner" class="banner">
-                </div>
             </div>  
         </header>
-        
-        <main>
-            
-            <h4><a href="#"></a>Nuevos productos</h4>
-            <div class="new-products">
-                <article class="main-article">
-                    <section>
-                        <img src="/img/product-1.jpg" alt="product-1">
-                    </section>
-                    <h3>Nombre del producto</h3>
-                    <div class="model">
-                        <p>Modelo 097907</p>
-                        <p class="price">Precio</p>
-                    </div>
-                    <p class="description">
-                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsam, adipisci? 
-                        Deserunt laborum dolore sint impedit ullam at soluta a. 
-                        Ipsa quo inventore eum? Assumenda quod aspernatur tempore et, mollitia doloremque.
-                    </p>
-                </article>
-                <article class="main-article">
-                    <section>
-                        <img src="/img/product-2.jpg" alt="product-2">
-                    </section>
-                    <h3>Nombre del producto</h3>
-                    <div class="model">
-                        <p>Modelo 097907</p>
-                        <p class="price">Precio</p>
-                    </div>
-                    <p class="description">
-                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsam, adipisci? 
-                        Deserunt laborum dolore sint impedit ullam at soluta a. 
-                        Ipsa quo inventore eum? Assumenda quod aspernatur tempore et, mollitia doloremque.
-                    </p>
-                </article>
-                <article class="main-article">
-                    <section>
-                        <img src="/img/product-3.jpg" alt="product-3">
-                    </section>
-                    <h3>Nombre del producto</h3>
-                    <div class="model">
-                        <p>Modelo 097907</p>
-                        <p class="price">Precio</p>
-                    </div>
-                    <p class="description">
-                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsam, adipisci? 
-                        Deserunt laborum dolore sint impedit ullam at soluta a. 
-                        Ipsa quo inventore eum? Assumenda quod aspernatur tempore et, mollitia doloremque.
-                    </p>
-                </article>
-                <article class="main-article">
-                    <section>
-                        <img src="/img/product-4.jpg" alt="product-4">
-                    </section>
-                    <h3>Nombre del producto</h3>
-                    <div class="model">
-                        <p>Modelo 097907</p>
-                        <p class="price">Precio</p>
-                    </div>
-                    <p class="description">
-                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsam, adipisci? 
-                        Deserunt laborum dolore sint impedit ullam at soluta a. 
-                        Ipsa quo inventore eum? Assumenda quod aspernatur tempore et, mollitia doloremque.
-                    </p>
-                </article>
+        <main class="login">
+            <div class="profile-logo">
+            <i class="fas fa-user-circle"></i>
             </div>
-            <h4>Los más buscados</h4>
-            <div class="commonly">
-               
-                <div class="transport">
-                    <img src="/img/transport.jpg" alt="transport">
-                    <h3 class="title"><a href="#"></a>Transporte</h3>
-                </div>
-                <div class="accessories">
-                    <img src="/img/accessories.jpg" alt="accessories">
-                    <h3 class="title"><a href="#"></a>Accesorios</h3>
-                </div>
+            <h3>¿No eres miembro?<a class="register" href="#">Regístrate</a></h3>
+            <div class="main-form">
+                <form action="/" method="POST">
+                    <input type="email" name="email-user" placeholder="   Email" pattern="^(?=.*[A-Za-z])(?=.*\d)(?=.*[@$!%*#?&])[A-Za-z\d@$!%*#?&]{8,}$" required>
+                    <input type="password" name="pass" placeholder="  Contraseña" required>
+                    <button class="sign-in" type="submit">Ingresa</button>
+                
+                </form>
+                <a class="recover-password" href="#">Olvidaste tu contraseña</a>
             </div>
         </main>
-        <section class="sale">
-            <a href="#"><img src="/img/sale.jpg" alt="sale"><img src="/img/sales.svg" alt="sales" class="sales"></a>
-        </section>
         <footer>
             <div class="social-bar">
                 <ul>
@@ -170,5 +100,6 @@
             </div>
             </div>
         </footer>
-    </body>  
+        
+    </body>
 </html>

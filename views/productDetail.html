@@ -5,6 +5,7 @@
         <title>Rodadamx</title>
         <meta name= "viewport" content="width = device-width, initial-scale= 1">
         <link rel="stylesheet" href="/css/styles.css">
+        <link rel="stylesheet" href="/css/productDetail.css">
         <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet"/>
         <link href="//db.onlinewebfonts.com/c/8d65e04904a1582f7e49f29c82eeda2d?family=Atlas+Grotesk+Web+Bold" rel="stylesheet" type="text/css"/>
         <link href="//db.onlinewebfonts.com/c/43372a4ce8dc3abbca31595815be7cf3?family=Atlas+Grotesk+Web+Light" rel="stylesheet" type="text/css"/>
@@ -47,93 +48,74 @@
                         <li><a href="#"></a>Rebajas</li>
                     </ul>
                 </nav>
-                <div class="banner">
-                    <img src="/img/banner.jpg" alt="banner" class="banner">
-                </div>
             </div>  
         </header>
         
         <main>
-            
-            <h4><a href="#"></a>Nuevos productos</h4>
-            <div class="new-products">
-                <article class="main-article">
-                    <section>
-                        <img src="/img/product-1.jpg" alt="product-1">
-                    </section>
-                    <h3>Nombre del producto</h3>
-                    <div class="model">
-                        <p>Modelo 097907</p>
-                        <p class="price">Precio</p>
-                    </div>
-                    <p class="description">
-                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsam, adipisci? 
-                        Deserunt laborum dolore sint impedit ullam at soluta a. 
-                        Ipsa quo inventore eum? Assumenda quod aspernatur tempore et, mollitia doloremque.
-                    </p>
-                </article>
-                <article class="main-article">
-                    <section>
-                        <img src="/img/product-2.jpg" alt="product-2">
-                    </section>
-                    <h3>Nombre del producto</h3>
-                    <div class="model">
-                        <p>Modelo 097907</p>
-                        <p class="price">Precio</p>
-                    </div>
-                    <p class="description">
-                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsam, adipisci? 
-                        Deserunt laborum dolore sint impedit ullam at soluta a. 
-                        Ipsa quo inventore eum? Assumenda quod aspernatur tempore et, mollitia doloremque.
-                    </p>
-                </article>
-                <article class="main-article">
-                    <section>
-                        <img src="/img/product-3.jpg" alt="product-3">
-                    </section>
-                    <h3>Nombre del producto</h3>
-                    <div class="model">
-                        <p>Modelo 097907</p>
-                        <p class="price">Precio</p>
-                    </div>
-                    <p class="description">
-                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsam, adipisci? 
-                        Deserunt laborum dolore sint impedit ullam at soluta a. 
-                        Ipsa quo inventore eum? Assumenda quod aspernatur tempore et, mollitia doloremque.
-                    </p>
-                </article>
-                <article class="main-article">
-                    <section>
-                        <img src="/img/product-4.jpg" alt="product-4">
-                    </section>
-                    <h3>Nombre del producto</h3>
-                    <div class="model">
-                        <p>Modelo 097907</p>
-                        <p class="price">Precio</p>
-                    </div>
-                    <p class="description">
-                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsam, adipisci? 
-                        Deserunt laborum dolore sint impedit ullam at soluta a. 
-                        Ipsa quo inventore eum? Assumenda quod aspernatur tempore et, mollitia doloremque.
-                    </p>
-                </article>
-            </div>
-            <h4>Los más buscados</h4>
-            <div class="commonly">
-               
-                <div class="transport">
-                    <img src="/img/transport.jpg" alt="transport">
-                    <h3 class="title"><a href="#"></a>Transporte</h3>
+            <div class="product-details">
+                <div class= "main-image">
+                    <img src="/img/product-5.jpg" alt="main-image">
                 </div>
-                <div class="accessories">
-                    <img src="/img/accessories.jpg" alt="accessories">
-                    <h3 class="title"><a href="#"></a>Accesorios</h3>
+                <section class="details-img">
+                    <img src="/img/product-5.jpg" alt="detail-a">
+                    <img src="/img/product-5.jpg" alt="detail-b">
+                    <img src="/img/product-5.jpg" alt="detail-c">
+                </section>
+            </div>
+
+            <div>
+                <section class="part-1">
+                    <h3>Nombre del producto</h3>
+                    <div class="model">
+                        <p>Modelo 097907</p>
+                    </div>
+                    <p class="description">
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsam, adipisci? 
+                        Deserunt laborum dolore sint impedit ullam at soluta a. 
+                        Ipsa quo inventore eum? Assumenda quod aspernatur tempore et, mollitia doloremque.
+                    </p>
+                    <h3 class="colors">Colores</h3>
+                    <section class="available-color">
+                        <img src="/img/main-color.jpg" alt="main-color">
+                        <img src="/img/color-2.jpg" alt="color-2">
+                    </section>
+                    <section>
+                        <div></div>
+                        <div></div>
+                    </section><div></div>
+
+                    <h3 class="size">Seleccione talla:</h3>
+                    <select name="size" id="size">
+                        <option value="30">10'' (1-4 años)</option>
+                        <option value="30">16'' (4-6 años)</option>
+                        <option value="30">20'' (6-9 años)</option>
+                        <option value="30">24'' (9-11 años)</option>
+                        <option value="30">26'' (11+ años)</option>
+                        <option value="30">27.5'' (155cms a 175cms)</option>
+                        <option value="30">29'' (160 en adelante)</option>
+                    </select>
+                </section>
+                <div class="cost">
+                    <h3 class="price">Precio:</h3>
+                    <h3>$1200 MXN</h3>
+                    <section class="buy-detail">
+                        <p class="discount">10% OFF</p>
+                        <button class="button-car" type="submit">Agregar al carrito<i class="fas fa-shopping-cart"></i></button>
+                        <div class="caracteristics">
+                            <input type="radio" name="buy" value="deliver" id="deliver">
+                            <label for="deliver">Entrega a domicilio</label>
+                            <input type="radio" name="buy" value="shop" id="shop">
+                            <label for="shop">Entrega en tienda</label>
+                        </div>
+                        <button class="button-buy" type="submit">Comprar</button>
+                        <section class="cards">
+                            <img src="/img/visa-logo.png" alt="cards-logo">
+                            <img src="/img/mastercard-logo.png" alt="mastercard-logo">
+                        </section>
+                    </section>
                 </div>
             </div>
         </main>
-        <section class="sale">
-            <a href="#"><img src="/img/sale.jpg" alt="sale"><img src="/img/sales.svg" alt="sales" class="sales"></a>
-        </section>
         <footer>
             <div class="social-bar">
                 <ul>
@@ -170,5 +152,6 @@
             </div>
             </div>
         </footer>
-    </body>  
+    </body>
+    
 </html>
