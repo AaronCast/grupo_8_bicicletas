@@ -91,11 +91,14 @@ nav.product-list{
     display: flex;
     top: 80px;
     padding-left: 32px;
+    z-index: 10;
+    overflow: visible;
 }
 
 nav.product-list ul{
     list-style: none;
 }
+
 
 ul.login-1 i{
     color: #fb9348 ;
@@ -148,6 +151,27 @@ p.description{
     font-size: 86%;
     text-align: justify;
     display: none;
+}
+
+div.details-link{
+    margin: 16px 16px;
+    text-align: center;
+    font-family: 'Atlas Grotesk Web Bold';
+    background-color: #474747;
+    height: 34px;
+    border-radius: 10px;
+    position: relative;
+    font-size: 96%;
+}
+
+div.details-link a{
+    position: absolute;
+    color: #faf9f9;
+    text-decoration: none;
+    font-size: 107%;
+    top: 13%;
+    left: 15%;
+    right: 15%;
 }
 
 div.model{
