@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>Rodadamx</title>
+        <meta name= "viewport" content="width = device-width, initial-scale= 1">
+        <link rel="stylesheet" href="/css/styles.css">
+        <link rel="stylesheet" href="/css/login.css">
+        <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet"/>
+        <link href="//db.onlinewebfonts.com/c/8d65e04904a1582f7e49f29c82eeda2d?family=Atlas+Grotesk+Web+Bold" rel="stylesheet" type="text/css"/>
+        <link href="//db.onlinewebfonts.com/c/43372a4ce8dc3abbca31595815be7cf3?family=Atlas+Grotesk+Web+Light" rel="stylesheet" type="text/css"/>
+    </head>
+    <body>
+       <%- include('partials/topHeader') %>
+
+        <main class="login">
+            <div class="profile-logo">
+            <i class="fas fa-user-circle"></i>
+            </div>
+            <h3>¿No eres miembro?<a class="register" href="#">Regístrate</a></h3>
+            <div class="main-form">
+                <form action="/" method="POST">
+                    <input type="email" name="email-user" placeholder="   Email" 
+                    pattern="^(?=.*[A-Za-z])(?=.*\d)(?=.*[@$!%*#?&])[A-Za-z\d@$!%*#?&]{8,}$"
+                    required>
+                    <input type="password" name="pass" placeholder="  Contraseña" 
+                    title="Necesitas usar 8 digitos" required>
+                    <button class="sign-in" type="submit">Ingresa</button>
+                
+                </form>
+                <a class="recover-password" href="#">Olvidaste tu contraseña</a>
+            </div>
+        </main>
+        <%- include('partials/footer') %>
+    </body>
+</html>
