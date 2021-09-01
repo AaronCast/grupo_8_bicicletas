@@ -67,8 +67,9 @@ section.buy-detail{
     align-items: flex-end;
     margin-left: -29px;
 }
-h3.price{
-    margin-right: 5px;
+h3.cost{
+    width: 48%;
+    margin-left: 5px;
 }
 
 p.discount{

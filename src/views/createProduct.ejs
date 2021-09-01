@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>Rodadamx</title>
+        <meta name= "viewport" content="width = device-width, initial-scale= 1">
+        <link rel="stylesheet" href="/css/styles.css">
+        <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet"/>
+        <link href="//db.onlinewebfonts.com/c/8d65e04904a1582f7e49f29c82eeda2d?family=Atlas+Grotesk+Web+Bold" rel="stylesheet" type="text/css"/>
+        <link href="//db.onlinewebfonts.com/c/43372a4ce8dc3abbca31595815be7cf3?family=Atlas+Grotesk+Web+Light" rel="stylesheet" type="text/css"/>
+    </head>
+    <body>
+        <main>
+            <center><h1>Crea producto</h1>
+            </center>
+            <form action="/create-product?_method=PUT" method="POST">
+                <hr><br>
+                <center><input type="text" name="name" placeholder="Nombre del producto" required>
+                <input type="text" name="model" placeholder="Modelo" required>
+                <input type="text" name="size" placeholder="Talla" required>
+                <input type="text" name="colors" placeholder="Colores (solo 2 colores)">
+                <input type="text" name="price" placeholder="Precio" required>
+                <input type="text" name="discount" placeholder="Descuento">
+                <section> 
+                <textarea name="description" id="description">Descripción</textarea>
+                </section>
+                <label for="productImage">Selecciona una imágen:</label>
+                <input type="file" name="productImage" id="productImage" multiple>
+                <button type="submit">Crear</button>
+            </center> 
+            </form>
+        </main>
+    </body>
+</html>

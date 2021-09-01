@@ -57,16 +57,20 @@
                     </select>
                 </section>
                 <div class="cost">
-                    <h3 class="price">Precio:</h3>
-                    <h3><%= product.price %></h3>
+                    <h3 class="price">Precio: </h3>
+                    <h3 class="cost"><%= product.price %></h3>
                     <section class="buy-detail">
                         <p class="discount">10% OFF</p>
                         <button class="button-car" type="submit">Agregar al carrito<i class="fas fa-shopping-cart"></i></button>
                         <div class="caracteristics">
-                            <input type="radio" name="buy" value="deliver" id="deliver">
-                            <label for="deliver">Entrega a domicilio</label>
-                            <input type="radio" name="buy" value="shop" id="shop">
-                            <label for="shop">Entrega en tienda</label>
+                            <section>
+                                <input type="radio" name="buy" value="deliver" id="deliver">
+                                <label for="deliver">Entrega a domicilio</label>
+                            </section>
+                            <section>
+                                <input type="radio" name="buy" value="shop" id="shop">
+                                <label for="shop">Entrega en tienda</label>
+                            </section>
                         </div>
                         <button class="button-buy" type="submit">Comprar</button>
                         <section class="cards">
