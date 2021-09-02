@@ -23,9 +23,9 @@
     </div>
     <div class="products">
         
-        <nav class="product-list">
+        <nav class="product-list submenu">
             <section class="arrow-list">
-                <i class="fas fa-caret-square-right"></i>
+                <i class="fas fa-caret-square-right more"></i>
             </section>
             <ul>
                 <li><a href="#"></a>Nuevos productos</li>
@@ -39,3 +39,21 @@
         </nav>
     </div> 
 </header>
+
+<script>
+ window.onload = init;
+    function init(){
+        document.querySelectorAll(".more")[0].addEventListener("click",submenu);
+        document.querySelector(".submenu > ul").style.display = "none"; 
+    }
+    
+    function submenu(){
+        var estado = document.querySelector(".submenu > ul").style.display;
+        if (estado == "none"){
+            document.querySelector(".submenu > ul").style.display = "block";
+        }else{
+            document.querySelector(".submenu > ul").style.display = "none";            
+        };
+        
+    }
+</script>
