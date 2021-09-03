@@ -21,6 +21,8 @@ ul.login-1{
     text-decoration: none;
     justify-content: flex-end;
     list-style: none;
+    height: 31px;
+    align-items: center;
 }
 
 body{
@@ -28,7 +30,7 @@ body{
 }
 
 ul.login-1 li{
-
+    font-size: 135%;
     margin: 0 15px;
 }
 img.banner{
@@ -83,25 +85,41 @@ div.navbar i{
     z-index: 3;
 }
 
+nav.product-list-2{
+    display: none;
+}
 nav.product-list{
     font-family: 'Atlas Grotesk Web Bold', sans-serif;
-    font-size: 15px;
+    font-size: 14px;
+    color:#474747;
     position: fixed;
     flex-direction: column;
     display: flex;
-    top: 80px;
-    padding-left: 32px;
+    top: 15%;
     z-index: 10;
-    overflow: visible;
+}
+section.arrow-list{
+    z-index: 15;
+}
+
+section.arrow-list i{
+    color: #b72347; 
+    font-size: 190%;
 }
 
 nav.product-list ul{
     list-style: none;
+    padding: 9px;
+    border-radius: 9px;
+    margin: -29px 0px 1px 21px;
+    background-color: rgba(232, 224, 224, 0.42);
+    display: block;
+    border-left: solid rgb(183, 35, 71);
 }
 
 
 ul.login-1 i{
-    color: #fb9348 ;
+    color: #b72347 ;
 }
 nav.product-list ul li{
     margin-bottom: 5px;
@@ -324,4 +342,53 @@ ul.contact-list li{
 
 main div article:hover{ 
     box-shadow: 0px 0px 10px rgb(100, 100, 100);
+}
+
+@media (min-width: 600px){
+    nav.product-list{
+        display: none;
+    }
+    ul.login-1{
+        display: none;
+    }
+    nav.product-list-2{
+        display: block;
+    }
+
+    nav.product-list-2 ul{
+        height: 37px;
+        align-items: center;
+        background-color: #6274752b;
+        color: #2d2c2c;
+        font-size: 80%;
+        list-style: none;
+        display: flex;
+        flex-direction: row;
+        flex-wrap: nowrap;
+        justify-content: space-around;
+        font-family: 'Atlas Grotesk Web Bold';
+    }
+    ul.login-2{
+        display:block;
+        padding: 4px 0px 7px 0px;
+        font-size: 87%;
+        list-style: none;
+        display: flex;
+        flex-direction: row;
+        flex-wrap: nowrap;
+        justify-content: flex-end;
+        align-content: space-between;
+        font-family: 'Atlas Grotesk Web Bold';
+        margin-bottom: 15px;
+        border-bottom: solid 5px #faf9f9;
+    }
+    
+    ul.login-2 a{
+        margin-right: 19px;
+        color: #b72347;
+        text-decoration: none;
+    }
+    img.banner {
+        margin-top: 0px;
+    }
 }

@@ -28,6 +28,7 @@ div.main-image{
 
 div.main-image img{
     width: 80%;
+    border-radius: 5px;
 }
 section.details-img{
     margin-left: 11%;
