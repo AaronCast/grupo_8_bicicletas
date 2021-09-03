@@ -55,6 +55,12 @@ const indexController = {
         }
         console.log(req.body)
         res.render('createProduct');
+    },
+    register: (req, res) =>{
+        res.render('register');
+    },
+    productCar: (req, res) =>{
+        res.render('productCart');
     }
 };
 
