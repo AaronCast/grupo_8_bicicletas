@@ -48,13 +48,16 @@ const indexController = {
         console.log(product);
         res.render('productDetail', {product:product});
     },
+    viewCreate: (req, res) => {
+        res.render('createProduct');
+    },
     create: (req, res) =>{
         let newProduct = {
             nombre: req.body.name,
             model: req.body.model
         }
         console.log(req.body)
-        res.render('createProduct');
+        res.redirect('/')
     }
 };
 

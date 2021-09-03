@@ -16,6 +16,9 @@ app.use(methodOverride('_method'));
 app.use(express.urlencoded({extended: false}));
 app.use(express.json());
 app.use('/', indexRouter);
+app.use((req, res, next) =>{
+    res.status(404).render('ERROOOR!');
+});
 
 
 
