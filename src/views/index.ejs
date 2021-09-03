@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>Rodadamx</title>
+        <meta name= "viewport" content="width = device-width, initial-scale= 1">
+        <link rel="stylesheet" href="/css/styles.css">
+        <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet"/>
+        <link href="//db.onlinewebfonts.com/c/8d65e04904a1582f7e49f29c82eeda2d?family=Atlas+Grotesk+Web+Bold" rel="stylesheet" type="text/css"/>
+        <link href="//db.onlinewebfonts.com/c/43372a4ce8dc3abbca31595815be7cf3?family=Atlas+Grotesk+Web+Light" rel="stylesheet" type="text/css"/>
+    </head>
+
+    <body>
+
+        <%- include('partials/topHeader') %>
+
+        <div class="banner">
+            <img src="/img/banner.jpg" alt="banner" class="banner">
+        </div>
+        
+        <main>
+            
+            <h4><a href="#"></a>Nuevos productos</h4>
+
+            <div class="new-products">
+
+                <% productList.forEach(product => { %>
+                <article class="main-article">
+                    <section>
+                        <img src="/img/<%= product.img %>" alt="product-1">
+                    </section>
+                    <h3><%= product.productName %></h3>
+                    <div class="model">
+                        <p><%= product.model %></p>
+                        <p class="price"><%= product.price %></p>
+                    </div>
+                    <p class="description">
+                        <%= product.description %>
+                    </p>
+                    <div class="details-link"><a href="/details/<%= product.id %>">Ver más</a>
+                    </div>
+                </article>
+                <% }) %>
+            </div>
+            <h4>Los más buscados</h4>
+            <div class="commonly">
+               
+                <div class="transport">
+                    <img src="/img/transport.jpg" alt="transport">
+                    <h3 class="title"><a href="#"></a>Transporte</h3>
+                </div>
+                <div class="accessories">
+                    <img src="/img/accessories.jpg" alt="accessories">
+                    <h3 class="title"><a href="#"></a>Accesorios</h3>
+                </div>
+            </div>
+        </main>
+        <section class="sale">
+            <a href="#"><img src="/img/sale.jpg" alt="sale"><img src="/img/sales.svg" alt="sales" class="sales"></a>
+        </section>
+        
+        <%- include('partials/footer') %>
+    </body>  
+</html>

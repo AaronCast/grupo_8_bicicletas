@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>Rodadamx</title>
+        <meta name= "viewport" content="width = device-width, initial-scale= 1">
+        <link rel="stylesheet" href="/css/styles.css">
+        <link rel="stylesheet" href="/css/productDetail.css">
+        <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet"/>
+        <link href="//db.onlinewebfonts.com/c/8d65e04904a1582f7e49f29c82eeda2d?family=Atlas+Grotesk+Web+Bold" rel="stylesheet" type="text/css"/>
+        <link href="//db.onlinewebfonts.com/c/43372a4ce8dc3abbca31595815be7cf3?family=Atlas+Grotesk+Web+Light" rel="stylesheet" type="text/css"/>
+    </head>
+
+    <body>
+        <%- include('partials/topHeader') %>
+        
+        <main>
+            <div class="product-details">
+                <div class= "main-image">
+                    <img src="/img/<%= product.img %>" alt="main-image">
+                </div>
+                <section class="details-img">
+                    <img src="/img/<%= product.img %>" alt="detail-a">
+                    <img src="/img/<%= product.img %>" alt="detail-b">
+                    <img src="/img/<%= product.img %>" alt="detail-c">
+                </section>
+            </div>
+
+            <div>
+                <section class="part-1">
+                    <h3><%= product.productName %></h3>
+                    <div class="model">
+                        <p><%= product.model %></p>
+                    </div>
+                    <p class="description">
+                        <%= product.description %>
+                    </p>
+                    <h3 class="colors">Colores</h3>
+                    <section class="available-color">
+                        <img src="/img/main-color.jpg" alt="main-color">
+                        <img src="/img/color-2.jpg" alt="color-2">
+                    </section>
+                    <section>
+                        <div></div>
+                        <div></div>
+                    </section><div></div>
+
+                    <h3 class="size">Seleccione talla:</h3>
+                    <select name="size" id="size">
+                        <option value="30">10'' (1-4 años)</option>
+                        <option value="30">16'' (4-6 años)</option>
+                        <option value="30">20'' (6-9 años)</option>
+                        <option value="30">24'' (9-11 años)</option>
+                        <option value="30">26'' (11+ años)</option>
+                        <option value="30">27.5'' (155cms a 175cms)</option>
+                        <option value="30">29'' (160 en adelante)</option>
+                    </select>
+                </section>
+                <div class="cost">
+                    <h3 class="price">Precio: </h3>
+                    <h3 class="cost"><%= product.price %></h3>
+                    <section class="buy-detail">
+                        <p class="discount">10% OFF</p>
+                        <button class="button-car" type="submit">Agregar al carrito<i class="fas fa-shopping-cart"></i></button>
+                        <div class="caracteristics">
+                            <section>
+                                <input type="radio" name="buy" value="deliver" id="deliver">
+                                <label for="deliver">Entrega a domicilio</label>
+                            </section>
+                            <section>
+                                <input type="radio" name="buy" value="shop" id="shop">
+                                <label for="shop">Entrega en tienda</label>
+                            </section>
+                        </div>
+                        <button class="button-buy" type="submit">Comprar</button>
+                        <section class="cards">
+                            <img src="/img/visa-logo.png" alt="cards-logo">
+                            <img src="/img/mastercard-logo.png" alt="mastercard-logo">
+                        </section>
+                    </section>
+                </div>
+            </div>
+        </main>
+    <%- include('partials/footer') %>
+    </body>    
+</html>

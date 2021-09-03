@@ -1,0 +1,327 @@
+* {
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+
+body{
+    min-width: 300px;
+}
+
+nav.login{
+    background-color: #6274752b;
+}
+
+ul.login-2{
+    display: none;
+}
+
+ul.login-1{
+    display: flex;
+    text-decoration: none;
+    justify-content: flex-end;
+    list-style: none;
+}
+
+body{
+    background-color: #faf9f9;
+}
+
+ul.login-1 li{
+
+    margin: 0 15px;
+}
+img.banner{
+    width: 100%;
+    margin-top: 10%;
+}
+
+div.bottom-header{
+    align-items: center;
+    display: flex;
+    flex-direction: row;
+    padding: 10px;
+}
+
+div.bottom-header {
+    background-color: #6274752b;
+    align-items: center;
+    display: flex;
+    flex-direction: row;
+    padding: 20px;
+    justify-content: space-between;
+    background-image: url('/img/1back.jpg');
+}
+
+section.logo{
+    padding-top: 10px;
+    text-align: center;
+}
+
+.logo img{
+    width: 75%;
+}
+
+div.navbar input{
+    border: 3.5px solid #474747;
+    border-radius: 10px;
+    width: 90%;
+    position: relative;
+    background-color: #e8e0e06b;
+}
+
+input::placeholder{
+    font-family: 'Atlas Grotesk Web Bold', sans-serif;
+    color:#474747
+}
+
+div.navbar i{
+    position: absolute;
+    color: #474747;
+    top: 35px;
+    right: 50px;
+    z-index: 3;
+}
+
+nav.product-list{
+    font-family: 'Atlas Grotesk Web Bold', sans-serif;
+    font-size: 15px;
+    position: fixed;
+    flex-direction: column;
+    display: flex;
+    top: 80px;
+    padding-left: 32px;
+    z-index: 10;
+    overflow: visible;
+}
+
+nav.product-list ul{
+    list-style: none;
+}
+
+
+ul.login-1 i{
+    color: #fb9348 ;
+}
+nav.product-list ul li{
+    margin-bottom: 5px;
+}
+
+h4{
+    margin-top: 36px;
+    color: #474747;
+    margin-bottom: 5%;
+    font-size: 20px;
+    text-align: center;
+    font-family: 'Atlas Grotesk Web Bold', 'san';
+}
+
+.main-article section img{
+    width: 100%;
+}
+
+.main-article{
+    padding: 10px;
+    width: 50%;
+    margin-top: 10px;
+    border-radius: 10px;
+}
+
+.main-article h3{
+    border-top: solid 1px #4747477a;
+}
+
+div.new-products{
+    justify-content: space-between;
+    flex-direction: row;
+    display: flex;
+    flex-wrap: wrap;
+    margin: 0px 10px;
+}
+
+h3{
+    margin-top: 5%;
+    font-family:  "Atlas Grotesk Web Bold";
+    font-size: 100%;
+    color: #474747;
+}
+
+p.description{
+    margin-top: 5%;
+    font-size: 86%;
+    text-align: justify;
+    display: none;
+}
+
+div.details-link{
+    margin: 16px 16px;
+    text-align: center;
+    font-family: 'Atlas Grotesk Web Bold';
+    background-color: #474747;
+    height: 34px;
+    border-radius: 10px;
+    position: relative;
+    font-size: 96%;
+}
+
+div.details-link a{
+    position: absolute;
+    color: #faf9f9;
+    text-decoration: none;
+    font-size: 107%;
+    top: 13%;
+    left: 15%;
+    right: 15%;
+}
+
+div.model{
+    font-family: 'Atlas Grotesk Web Light';
+    margin-top: 6%;
+    font-size: 90%;
+}
+h5.price{
+    font-size: 116%;
+    margin-top: 5%;    
+}
+
+div.commonly{
+    align-items: center;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+div.transport img{
+    width: 97%;
+    padding-top: 2px;
+}
+
+div.transport{
+    margin-left: 20px;
+}
+
+div.accessories img{
+    width: 98%;
+}
+
+div.accessories{
+    margin-right: 20px;
+}
+
+h3.title{
+    font-size: 17px;
+    text-align: center;
+}
+
+section.sale img{
+    width: 100%;
+}
+
+section.sale{
+    margin-top: 17%;
+    position: relative;
+}
+
+section.sale img.sales{
+    left: 6%;
+    width: 90%;
+    position: absolute;
+    top: 13px;
+}
+
+footer{
+    padding: 0px 20px;
+    margin-top: 12%;
+    flex-direction: column;
+    display: flex;
+    justify-content: space-between;
+}
+
+footer img{
+    padding: 15px 15px 0px;
+    width: 50%;
+}
+
+div.color{
+    background-color: #f7e287cf;
+}
+
+h4.client-attention{
+    padding-left: 6%;
+    color: #474747;
+    margin-bottom: 4%;
+    font-size: 20px;
+    text-align: left;
+    font-family: 'Atlas Grotesk Web Bold', 'san';
+}
+
+nav ul.info{
+    padding-left: 6%;
+    font-family: 'Atlas Grotesk Web Light';
+    margin-top: -10px;
+    font-size: 100%;
+    list-style: none;
+}
+nav ul.info li{
+    margin-bottom: 10px;
+}
+
+div.social-bar ul{
+    list-style: none;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+}
+
+div.social-bar ul li{
+    text-align: center;
+    margin: 0px 0px 0px 5px;
+    font-size: 30px;
+}
+
+div.social-bar a.rod-facebook{
+    color: #3b5998;
+}
+
+div.social-bar a.rod-twitter{
+    color: #337CD3;
+}
+div.social-bar a.rod-pinterest{
+    color: #dc1d38;
+}
+div.social-bar a.rod-instagram{
+    color: #981682;
+}
+
+
+
+div.contact{
+    height: 187px;
+}
+
+h4.contacto{
+    padding-left: 6%;
+    color: #474747;
+    margin-bottom: 4%;
+    font-size: 20px;
+    text-align: left;
+    font-family: 'Atlas Grotesk Web Bold', 'san';
+}
+
+ul.contact-list{
+    font-family: 'Atlas Grotesk Web Light';
+    margin-top: -10px;
+    font-size: 100%;
+    list-style: none;
+    text-align: left;
+    padding-left: 6%;
+}
+
+ul.contact-list li{
+    margin-bottom: 10px;
+}
+
+
+main div article:hover{ 
+    box-shadow: 0px 0px 10px rgb(100, 100, 100);
+}
