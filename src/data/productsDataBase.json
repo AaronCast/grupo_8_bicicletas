@@ -1,0 +1,13 @@
+[
+    {
+        "id":1,
+        "productName":"Benotto no.545",
+        "model": "Modelo 097907",
+        "price": "$ 12,000",
+        "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsam adipisci? Deserunt laborum dolore sint impedit ullam at soluta a. Ipsa quo inventore eum? Assumenda quod aspernatur tempore et, mollitia doloremque.",
+        "img": "product-1.jpg",
+        "discount": "10",
+        "category": "bicycles"
+    }
+
+]

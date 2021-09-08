@@ -1,3 +1,21 @@
+const fs = require('fs');
+const path = require('path');
+
+const productsFilePath = path.join(__dirname, '../data/productsDataBase.json');
+const products = JSON.parse(fs.readFileSync(productsFilePath, 'utf-8'));
+
+const toThousand = n => n.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ".");
+
+//const visited
+//const bicycles
+//const bamboocycles
+//const rollerskate
+//const skateboard
+//const accessories
+const inSale = products.filter(function(product){
+    return product.category == 'in-sale'
+});
+
 const productList = [
     {
         id:1,
@@ -34,22 +52,17 @@ const productList = [
     
 ];
 
-
-
 const indexController = {
     index: (req, res) => {
-        res.render('index', {productList: productList});
+        res.render('index', {products: products, toThousand});
     },
     login: (req, res) =>{
         res.render('login');
     },
     details: (req, res) => {
-        let product = productList.find(product => product.id == req.params.id);
+        let product = products.find(product => product.id == req.params.id);
         console.log(product);
         res.render('productDetail', {product:product});
-    },
-    viewCreate: (req, res) => {
-        res.render('createProduct');
     },
     create: (req, res) =>{
         let newProduct = {

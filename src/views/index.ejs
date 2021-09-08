@@ -24,7 +24,9 @@
 
             <div class="new-products">
 
-                <% productList.forEach(product => { %>
+                <% products.forEach(product => {
+                    let finalPrice = (product.price * ((100 - product.discount) / 100)).toFixed(0) 
+                    %>
                 <article class="main-article">
                     <section>
                         <img src="/img/<%= product.img %>" alt="product-1">
@@ -32,12 +34,16 @@
                     <h3><%= product.productName %></h3>
                     <div class="model">
                         <p><%= product.model %></p>
-                        <p class="price"><%= product.price %></p>
+                        <div>
+                            <p class="price"><%= product.price %></p>
+                            <p class="discount"><%= product.discount %> %OFF</p>
+                        </div>
+                        <p class="final-price"><%= toThousand(finalPrice) %></p>
                     </div>
                     <p class="description">
                         <%= product.description %>
                     </p>
-                    <div class="details-link"><a href="/details/<%= product.id %>">Ver más</a>
+                    <div class="details-link"><a href="/detail/<%= product.id %>">Ver más</a>
                     </div>
                 </article>
                 <% }) %>
