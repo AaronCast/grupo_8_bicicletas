@@ -9,13 +9,17 @@ const toThousand = n => n.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ".");
 
 const productsController = {
     index: (req, res) => {
-        res.render('index', {products: products, toThousand});
+        res.render('products', {products: products, toThousand});
     },
-    viewCreate: (req, res) => {
-        res.render('createProduct')
+    details: (req, res) => {
+        let product = products.find(product => product.id == req.params.id);
+        console.log(product);
+        res.render('details', {product:product});
+    },
+    viewCreate: (req, res) =>{
+        res.render('createProduct');
     }
-
-       
-
 }
+
+
 module.exports = productsController

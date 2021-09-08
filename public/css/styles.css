@@ -100,6 +100,7 @@ nav.product-list{
 }
 section.arrow-list{
     z-index: 15;
+    margin-right: 83%;
 }
 
 section.arrow-list i{
@@ -115,6 +116,15 @@ nav.product-list ul{
     background-color: rgba(232, 224, 224, 0.42);
     display: block;
     border-left: solid rgb(183, 35, 71);
+}
+nav.product-list ul a{
+    text-decoration: none;
+    color: #474747;
+}
+
+nav.product-list-2 ul a{
+    text-decoration: none;
+    color: #2d2c2c;
 }
 
 

@@ -18,12 +18,14 @@ const indexRouter = require('./src/routes/indexRouter');
 const productsRouter = require('./src/routes/productsRouter');
 
 app.use('/', indexRouter);
-app.use('/create-product', productsRouter);
+app.use('/',productsRouter);
+
+app.use('/products', productsRouter);
 
 
-app.use((req, res, next) =>{
-    res.status(404).render('ERROOOR!');
-});
+//app.use((req, res, next) =>{
+ //   res.status(404).render('ERROOOR!');
+//});
 
 
 

@@ -6,7 +6,9 @@ const products = JSON.parse(fs.readFileSync(productsFilePath, 'utf-8'));
 
 const toThousand = n => n.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ".");
 
-//const visited
+const newProduct = products.filter(function(product){
+    return product.status == "new"
+});
 //const bicycles
 //const bamboocycles
 //const rollerskate
@@ -54,24 +56,10 @@ const productList = [
 
 const indexController = {
     index: (req, res) => {
-        res.render('index', {products: products, toThousand});
+        res.render('index', {newProduct, toThousand});
     },
     login: (req, res) =>{
         res.render('login');
-    },
-    details: (req, res) => {
-        let product = products.find(product => product.id == req.params.id);
-        console.log(product);
-        res.render('productDetail', {product:product});
-    },
-    create: (req, res) =>{
-        let newProduct = {
-            nombre: req.body.name,
-            model: req.body.model
-        }
-        console.log(req.body)
-        res.redirect('/')
-        res.render('createProduct');
     },
     register: (req, res) =>{
         res.render('register');

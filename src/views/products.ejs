@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+    <%- include('partials/head', {title: 'Todos los productos'}) %>
+    <body>
+        <%- include('partials/topHeader') %>
+        <main>
+            <h4>Todos los productos</h4>
+            <div class="new-products">
+
+                <% products.forEach(product => {
+                    let finalPrice = (product.price * ((100 - product.discount) / 100)).toFixed(0) 
+                    %>
+                <article class="main-article">
+                    <section>
+                        <img src="/img/<%= product.img %>" alt="product-1">
+                    </section>
+                    <h3><%= product.productName %></h3>
+                    <div class="model">
+                        <p><%= product.model %></p>
+                        <div>
+                            <p class="price"><%= product.price %></p>
+                            <p class="discount"><%= product.discount %> %OFF</p>
+                        </div>
+                        <p class="final-price"><%= toThousand(finalPrice) %></p>
+                    </div>
+                    <p class="description">
+                        <%= product.description %>
+                    </p>
+                    <div class="details-link"><a href="/detail/<%= product.id %>">Ver más</a>
+                    </div>
+                </article>
+                <% }) %>
+            </div>
+            <%- include('partials/footer') %>
+        </main>
+    </body>
+</html>

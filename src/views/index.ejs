@@ -19,12 +19,10 @@
         </div>
         
         <main>
-            
-            <h4><a href="#"></a>Nuevos productos</h4>
-
+            <h4><a href="#">Productos Nuevos</a></h4>
             <div class="new-products">
 
-                <% products.forEach(product => {
+                <% newProduct.forEach(product => {
                     let finalPrice = (product.price * ((100 - product.discount) / 100)).toFixed(0) 
                     %>
                 <article class="main-article">
