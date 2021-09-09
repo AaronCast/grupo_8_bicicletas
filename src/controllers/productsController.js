@@ -18,6 +18,16 @@ const productsController = {
     },
     viewCreate: (req, res) =>{
         res.render('createProduct');
+    }, 
+    create: (req, res) => {
+        let newProduct = {
+            ...req.body,
+            image:"default-image.png",
+            id: products[products.length - 1].id +1
+        };
+        products.push(newProduct);
+        fs.writeFileSync(productsFilePath, JSON.stringify(products, null, ' '));
+        res.redirect('/');
     }
 }
 

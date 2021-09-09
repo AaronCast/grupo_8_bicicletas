@@ -16,11 +16,37 @@
             <form action="/create-product?_method=PUT" method="POST">
                 <hr><br>
                 <center><input type="text" name="name" placeholder="Nombre del producto" required>
-                <input type="text" name="model" placeholder="Modelo" required>
-                <input type="text" name="size" placeholder="Talla" required>
+                <input type="text" name="model" placeholder="Modelo">
+
+                <h3 class="category">Categoría</h3>
+                <select name="category" id="category">
+                    <option value="bicycles">Bicicletas</option>
+                    <option value="bamboocycles">Bamboocycles</option>
+                    <option value="rollerskate">Patines</option>
+                    <option value="skateboard">Skateboard</option>
+                    <option value="accessories">Accesorios</option>
+                </select>
+                <h3 class="status">Status</h3>
+                <select name="status" id="status">
+                    <option value="new">Nuevo</option>
+                    <option value="in-sale">Rebaja</option>
+                    <option value="visited">Lo más visto</option>
+                </select>
+                <div>
+                    <h3 class="size">Seleccione talla:</h3>
+                    <section>
+                        <input type="checkbox" name="size" value="10'' (1-4 años)"> 10'' (1-4 años)</option>
+                        <input type="checkbox" name="size" value="16'' (4-6 años)"> 16'' (4-6 años)</option>
+                        <input type="checkbox" name="size" value="20'' (6-9 años)"> 20'' (6-9 años)</option>
+                        <input type="checkbox" name="size" value="24'' (9-11 años)"> 24'' (9-11 años)</option>
+                        <input type="checkbox" name="size" value="26'' (11+ años)"> 26'' (11+ años)</option>
+                        <input type="checkbox" name="size" value="27.5'' (155cms a 175cms)"> 27.5'' (155cms a 175cms)</option>
+                        <input type="checkbox" name="size" value="29'' (160 en adelante)"> 29'' (160 en adelante)</option>
+                    </section>
+                </div>
                 <input type="text" name="colors" placeholder="Colores (solo 2 colores)">
-                <input type="text" name="price" placeholder="Precio" required>
-                <input type="text" name="discount" placeholder="Descuento">
+                <input type="text" name="price" placeholder="Precio: ej. 12,000" required>
+                <input type="text" name="discount" placeholder="Descuento: ej. 30">
                 <section> 
                 <textarea name="description" id="description">Descripción</textarea>
                 </section>
