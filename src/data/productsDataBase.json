@@ -20,5 +20,18 @@
   "discount": "10",
   "category": "bicycles",
   "status": "new"
+ },
+ {
+  "name": "carrito",
+  "model": "2423",
+  "category": "bamboocycles",
+  "status": "in-sale",
+  "colors": "",
+  "price": "354",
+  "discount": "54543",
+  "description": "Descripción",
+  "productImage": "",
+  "image": "default-image.png",
+  "id": 3
  }
 ]
