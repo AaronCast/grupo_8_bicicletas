@@ -22,15 +22,15 @@
   "status": "new"
  },
  {
-  "name": "carrito",
-  "model": "2423",
-  "category": "bamboocycles",
-  "status": "in-sale",
+  "Productname": "cc",
+  "model": "",
+  "category": "bicycles",
+  "status": "new",
   "colors": "",
-  "price": "354",
-  "discount": "54543",
-  "description": "Descripción",
-  "productImage": "",
+  "price": "45",
+  "discount": "",
+  "description": "",
+  "productImage": "Butler-hand-removebg-preview.png",
   "image": "default-image.png",
   "id": 3
  }

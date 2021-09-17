@@ -15,7 +15,7 @@
             </center>
             <form action="/create-product?_method=PUT" method="POST">
                 <hr><br>
-                <center><input type="text" name="name" placeholder="Nombre del producto" required>
+                <center><input type="text" name="Productname" placeholder="Nombre del producto" required>
                 <input type="text" name="model" placeholder="Modelo">
 
                 <h3 class="category">Categoría</h3>
@@ -48,10 +48,10 @@
                 <input type="text" name="price" placeholder="Precio: ej. 12,000" required>
                 <input type="text" name="discount" placeholder="Descuento: ej. 30">
                 <section> 
-                <textarea name="description" id="description">Descripción</textarea>
+                <textarea name="description" id="description" placeholder = "Descripción:"></textarea>
                 </section>
                 <label for="productImage">Selecciona una imágen:</label>
-                <input type="file" name="productImage" id="productImage" multiple>
+                <input type="file" name="productImage" id="productImage" enctype= 'multipart/form-data' multiple>
                 <button type="submit">Crear</button>
             </center> 
             </form>
