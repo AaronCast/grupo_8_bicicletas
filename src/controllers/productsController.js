@@ -14,15 +14,22 @@ const productsController = {
     details: (req, res) => {
         let product = products.find(product => product.id == req.params.id);
         console.log(product);
-        res.render('details', {product:product});
+        res.render('details', {product:product, toThousand});
     },
     viewCreate: (req, res) =>{
         res.render('createProduct');
     }, 
     create: (req, res) => {
+        let image
+        console.log(req.files);
+        if(req.files[0] != undefined){
+            image = req.files[0].filename
+        } else{
+            image = 'default-img.png'
+        };
         let newProduct = {
             ...req.body,
-            image:"default-image.png",
+            image: image,
             id: products[products.length - 1].id +1
         };
         products.push(newProduct);

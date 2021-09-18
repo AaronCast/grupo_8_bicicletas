@@ -27,14 +27,15 @@
                     %>
                 <article class="main-article">
                     <section>
-                        <img src="/img/<%= product.img %>" alt="product-1">
+                        <img src="/img/products/<%= product.image %>" alt="product-1">
                     </section>
                     <h3><%= product.productName %></h3>
                     <div class="model">
                         <p><%= product.model %></p>
+                        <p><%=product.brand %></p>
                         <div>
-                            <p class="price">$ <%= product.price %></p>
-                            <p class="discount"><%= product.discount %> %OFF</p>
+                            <p class="price">$ <%= toThousand(product.price) %></p>
+                            <section><p class="discount"><%= product.discount %> %OFF</p></section>
                         </div>
                         <p class="final-price"><%= toThousand(finalPrice) %></p>
                     </div>

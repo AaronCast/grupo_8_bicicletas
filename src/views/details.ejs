@@ -17,12 +17,12 @@
         <main>
             <div class="product-details">
                 <div class= "main-image">
-                    <img src="/img/<%= product.img %>" alt="main-image">
+                    <img src="/img/products/<%= product.image %>" alt="main-image">
                 </div>
                 <section class="details-img">
-                    <img src="/img/<%= product.img %>" alt="detail-a">
-                    <img src="/img/<%= product.img %>" alt="detail-b">
-                    <img src="/img/<%= product.img %>" alt="detail-c">
+                    <img src="/img/products/<%= product.image%>" alt="detail-a">
+                    <img src="/img/products/<%= product.image%>" alt="detail-b">
+                    <img src="/img/products/<%= product.image%>" alt="detail-c">
                 </section>
             </div>
 
@@ -31,6 +31,7 @@
                     <h3><%= product.productName %></h3>
                     <div class="model">
                         <p><%= product.model %></p>
+                        <p><%=product.brand %></p>
                     </div>
                     <p class="description">
                         <%= product.description %>
@@ -57,11 +58,18 @@
                         <option value="30">29'' (160 en adelante)</option>
                     </select>
                 </section>
+               
                 <div class="cost">
                     <h3 class="price">Precio: </h3>
-                    <h3 class="cost"><%= product.price %></h3>
+                    <h3 class="cost">$ <%= toThousand(product.price) %></h3>
                     <section class="buy-detail">
-                        <p class="discount">10% OFF</p>
+                        <% if(product.discount > 0) {
+                            let finalPrice = (product.price * ((100 - product.discount) / 100)).toFixed(0) %>
+                        <p class="discount"><%= product.discount %> %OFF</p>
+                        <p class="final-price"><%= toThousand(finalPrice) %></p>
+                        <% } else { %>
+                        <p class="final-price">$ <%= toThousand(product.price) %></p>
+                        <% } %>
                         <button class="button-car" type="submit">Agregar al carrito<i class="fas fa-shopping-cart"></i></button>
                         <div class="caracteristics">
                             <section>

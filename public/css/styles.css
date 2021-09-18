@@ -146,6 +146,7 @@ h4{
 
 .main-article section img{
     width: 100%;
+    border-radius: 10px;
 }
 
 .main-article{
@@ -351,7 +352,7 @@ ul.contact-list li{
 
 
 main div article:hover{ 
-    box-shadow: 0px 0px 10px rgb(100, 100, 100);
+    box-shadow: 0px 0px 10px #474747;
 }
 
 @media (min-width: 600px){

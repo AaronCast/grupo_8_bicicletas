@@ -7,12 +7,14 @@ const productsController = require('../controllers/productsController');
 
 const storage = multer.diskStorage({
     destination:function(req,file,cb){
-        cb(null, 'public/img/products')
+        cb(null, 'public/img/products');
     },
     filename: function(req,file,cb){
-        cb(null, file.fieldname + '-' + Date.now() + path.extname(file.originalname))
+        console.log(file);
+        const newProductName = file.fieldname + Date.now() + path.extname(file.originalname);
+        cb(null, newProductName);
     }
-})
+});
 
 const upload = multer({storage: storage});
 
