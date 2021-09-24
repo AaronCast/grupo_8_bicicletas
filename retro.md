@@ -62,3 +62,6 @@ Retrospectiva
     Lo visto recientemente en clase (registro de artículos en JSON)
 4)Aprendido:
     Aprendimos diferentyes tecnologías que es lo más sobresaliente            
+
+****************************************
+Prueba Sprint4
