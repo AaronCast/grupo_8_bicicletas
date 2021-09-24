@@ -17,14 +17,15 @@
       justify-content: center;    align-items: center;
     }
   
-    .form input {
+    .form input{
       width: 60%;
       height: 30px;
       margin: 0.5rem;
-      border: 1px solid #d3d3d3;
+      border: 1px solid #929292;
       overflow: visible;
       border-radius: 4px;
     }
+    
     .form span {
       width: 60%;
       height: 30px;

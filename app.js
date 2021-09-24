@@ -16,11 +16,14 @@ app.set('views', path.join(__dirname, './src/views'));
 /* Rutas */
 const indexRouter = require('./src/routes/indexRouter');
 const productsRouter = require('./src/routes/productsRouter');
+const usersRouter = require('./src/routes/usersRouter');
 
 app.use('/', indexRouter);
 app.use('/',productsRouter);
+app.use('/',usersRouter);
 
 app.use('/products', productsRouter);
+app.use('/register', usersRouter);
 
 
 //app.use((req, res, next) =>{

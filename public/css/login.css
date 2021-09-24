@@ -47,6 +47,13 @@ form input{
     border-radius: 15px;
     width: 120%;
 }
+form select{
+    color: #474747;
+    background-color: #e8e0e06b;
+    margin-bottom: 13px;
+    height: 26px;
+    width: 60%;
+}
 input::placeholder{
     font-family: 'Atlas Grotesk Web Bold', sans-serif;
 }
