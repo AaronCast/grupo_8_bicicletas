@@ -64,4 +64,21 @@ Retrospectiva
     Aprendimos diferentyes tecnologías que es lo más sobresaliente            
 
 ****************************************
-Prueba Sprint4
+                    //SPRINT 4:
+1. Comenzar a hacer:
+a) Configurar Trello y elejir las qué actividades realizaremos.
+b) Generar los JSON de productos y de usuarios.
+c) Revisar que los CRUD funcionen adecuadamente.
+
+2. Hacer más:
+a) Proponer mejoras sobre la lógica.
+b) Propuesta de cambios en los estilos.
+
+3. Continuar haciendo:
+a) Propuestas para depurar.
+
+4. Hacer menos:
+a) Por el momento dejar en segundo plano la configuración en los estilos.
+
+5. Dejar de hacer:
+a) Algunas características relacionadas con los estilos mostrados en los wireframes.
