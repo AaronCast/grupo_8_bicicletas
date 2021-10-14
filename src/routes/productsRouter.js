@@ -25,7 +25,7 @@ router.get('/product/create', productsController.viewCreate);
 router.put('/product/create', upload.any() , productsController.create);
 router.get('/product/detail/:id', productsController.details);
 router.get('/product/:id/edit', productsController.edit);
-//router.patch('products/:id/edit')
+router.patch('/product/:id/edit', productsController.update);
 
 
 

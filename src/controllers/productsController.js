@@ -37,8 +37,39 @@ const productsController = {
         res.redirect('/');
     },
     edit: (req, res) => {
-        let product = products.find(product => product.id == req.params.id);
-        res.render('editProduct.ejs', {product: product});
+        let id = req.params.id
+        let productToEdit = products.find(product => product.id == id);
+        res.render('editProduct.ejs', {productToEdit});
+    },
+    update: (req, res) => {
+        let id = req.params.id;
+        let productToEdit = products.find(product => product.id == id);
+
+        // if(req.files[0] != undefined){
+        //     image = req.files[0].filename
+        // } else{
+        //     image = 'default-img.png'
+        // };
+        productToEdit = {
+            id: productToEdit.id,
+            ...req.body,
+            image: productToEdit.image
+        };
+
+        let newProducts = products.map(product => {
+            if(product.id == productToEdit.id){
+                return product = {...productToEdit}
+            }
+            return product
+        });
+        fs.writeFileSync(productsFilePath, JSON.stringify(newProducts, null, ' '));
+        res.redirect('/');
+    },
+    destroy: (req, res) => {
+        let id = req.params.id;
+        let finalProducts = products.filter(product => product.id != id);
+        fs.writeFileSync(productsFilePath, JSON.stringify(finalproducts, null, ' '));
+        res.redirect('/');
     }
 }
 

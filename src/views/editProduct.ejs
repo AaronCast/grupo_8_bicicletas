@@ -14,21 +14,21 @@
         <%- include('partials/topHeader') %>
         <main>
             <center><h1>Editar Producto:</h1></center>
-            <form action="/product/create?_method=PUT" enctype= 'multipart/form-data' method="POST">
+            <form action="/product/<%= productToEdit.id %>/edit?_method=PATCH" enctype= 'multipart/form-data' method="POST">
                 <hr><br>
                 <center>
                     <label for="productName">Nombre:</label>
-                    <input class="main-input" type="text" name="productName" value="<%= product.productName %>" required>
+                    <input class="main-input" type="text" name="productName" id="productName" >
                     
                     <label for="model">Modelo:</label>
-                    <input class="main-input" type="text" name="model" value="<%= product.model %>">
+                    <input class="main-input" type="text" name="model" value="<%= productToEdit.model %>">
 
                     <label for="brand">Marca:</label>
-                    <input class="main-input" type="text" name="brand" value = '<%= product.brand%>'>
+                    <input class="main-input" type="text" name="brand" value = '<%= productToEdit.brand%>'>
                 
                 <div class="category-section">
                     <h3 class="category">Categoría:</h3>
-                        <select class="category-menu" name="category" id="category" value= '<%= product.category%>' required>
+                        <select class="category-menu" name="category" id="category" value= '<%= productToEdit.category%>' >
                             <option value="bicycles">Bicicletas</option>
                             <option value="bamboocycles">Bamboocycles</option>
                             <option value="rollerskate">Patines</option>
@@ -72,24 +72,22 @@
                 </div>
 
                 <label for="colors">Colores:</label>
-                <input class="color-section" type="text" name="colors" value= '<%= product.colors %>'>
+                <input class="color-section" type="text" name="colors" value= '<%= productToEdit.colors %>'>
 
                 <div class="cost-section">
                     <label for="price">Precio:</label>
-                    <input class="price-section" type="text" name="price" value="   <%= product.price %>" required>
+                    <input class="price-section" type="text" name="price" value="   <%= productToEdit.price %>" >
 
                     <label for="discount">Descuento:</label>
-                    <input class="discount-section" type="text" name="discount" value="<%= product.discount %>" >
+                    <input class="discount-section" type="text" name="discount" value="<%= productToEdit.discount %>" >
                 </div>
                 <section>
                     <label for="description">Descripción:</label> 
-                    <textarea class="description" name="description" id="description"><%= product.description %></textarea>
+                    <textarea class="description" name="description" id="description"><%= productToEdit.description %></textarea>
                 </section>
                 <label for="productImage">Selecciona imágen(es):</label>
-                <input class="upload-file" type="file" name="image" id="image"
-                value="<%= product.image %>" multiple><br>
-                <button class="update" type="submit">Actualizar</button>
-            </center> 
+                <input class="upload-file" type="file" name="image" id="image" multiple><br>
+                <button class="update" type="submit">Actualizar</button></center> 
             </form>
             <%- include('partials/footer') %>
         </main>
