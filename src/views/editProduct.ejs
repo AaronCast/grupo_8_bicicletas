@@ -13,16 +13,22 @@
     <body>
         <%- include('partials/topHeader') %>
         <main>
-            <center><h1>Crea producto</h1></center>
+            <center><h1>Editar Producto:</h1></center>
             <form action="/product/create?_method=PUT" enctype= 'multipart/form-data' method="POST">
                 <hr><br>
-                <center><input class="main-input" type="text" name="productName" placeholder="Nombre del producto:" required>
-                <input class="main-input" type="text" name="model" placeholder="Modelo:">
-                <input class="main-input" type="text" name="brand" placeholder="Marca:">
+                <center>
+                    <label for="productName">Nombre:</label>
+                    <input class="main-input" type="text" name="productName" value="<%= product.productName %>" required>
+                    
+                    <label for="model">Modelo:</label>
+                    <input class="main-input" type="text" name="model" value="<%= product.model %>">
+
+                    <label for="brand">Marca:</label>
+                    <input class="main-input" type="text" name="brand" value = '<%= product.brand%>'>
                 
                 <div class="category-section">
                     <h3 class="category">Categoría:</h3>
-                        <select class="category-menu" name="category" id="category">
+                        <select class="category-menu" name="category" id="category" value= '<%= product.category%>' required>
                             <option value="bicycles">Bicicletas</option>
                             <option value="bamboocycles">Bamboocycles</option>
                             <option value="rollerskate">Patines</option>
@@ -34,7 +40,7 @@
                     <h3 class="status">Status:</h3>
                         <select class="status-section" name="status" id="status">
                             <option value="new">Nuevo</option>
-                             <option value="in-sale">Rebaja</option>
+                            <option value="in-sale">Rebaja</option>
                             <option value="visited">Lo más visto</option>
                         </select>
                 </div>
@@ -64,17 +70,25 @@
                         </section>
                         <input class="other-size" type="text" name="size" placeholder="Otra medida...">
                 </div>
-                <input class="color-section" type="text" name="colors" placeholder="Colores:">
+
+                <label for="colors">Colores:</label>
+                <input class="color-section" type="text" name="colors" value= '<%= product.colors %>'>
+
                 <div class="cost-section">
-                    <input class="price-section" type="text" name="price" placeholder="Precio: ej. 12,000" required>
-                    <input class="discount-section" type="text" name="discount" placeholder="Descuento: ej. 30">
+                    <label for="price">Precio:</label>
+                    <input class="price-section" type="text" name="price" value="   <%= product.price %>" required>
+
+                    <label for="discount">Descuento:</label>
+                    <input class="discount-section" type="text" name="discount" value="<%= product.discount %>" >
                 </div>
-                <section> 
-                    <textarea class="description" name="description" id="description" placeholder = "   Descripción:"></textarea>
+                <section>
+                    <label for="description">Descripción:</label> 
+                    <textarea class="description" name="description" id="description"><%= product.description %></textarea>
                 </section>
-                <label for="productImage">Selecciona una imágen:</label>
-                <input class="upload-file" type="file" name="image" id="image" multiple><br>
-                <button class="create" type="submit">Crear</button>
+                <label for="productImage">Selecciona imágen(es):</label>
+                <input class="upload-file" type="file" name="image" id="image"
+                value="<%= product.image %>" multiple><br>
+                <button class="update" type="submit">Actualizar</button>
             </center> 
             </form>
             <%- include('partials/footer') %>

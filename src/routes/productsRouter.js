@@ -21,9 +21,12 @@ const upload = multer({storage: storage});
 
 router.get('/', productsController.index);
 router.get('/products', productsController.index);
-router.get('/detail/:id', productsController.details);
-router.get('/create-product', productsController.viewCreate);
-router.put('/create-product', upload.any() , productsController.create);
+router.get('/product/create', productsController.viewCreate);
+router.put('/product/create', upload.any() , productsController.create);
+router.get('/product/detail/:id', productsController.details);
+router.get('/product/:id/edit', productsController.edit);
+//router.patch('products/:id/edit')
+
 
 
 module.exports = router;

@@ -20,9 +20,11 @@
                     <img src="/img/products/<%= product.image %>" alt="main-image">
                 </div>
                 <section class="details-img">
-                    <img src="/img/products/<%= product.image%>" alt="detail-a">
-                    <img src="/img/products/<%= product.image%>" alt="detail-b">
-                    <img src="/img/products/<%= product.image%>" alt="detail-c">
+                    <ul>
+                        <li>
+                            <img src="/img/products/<%= product.image %>" alt="">
+                        </li>
+                    </ul>
                 </section>
             </div>
 
@@ -87,8 +89,10 @@
                             <img src="/img/mastercard-logo.png" alt="mastercard-logo">
                         </section>
                     </section>
+                        <div>
+                            <a href="/product/<%= product.id%>/edit">Editar</a>
+                        </div>
                 </div>
-            </div>
         </main>
     <%- include('partials/footer') %>
     </body>    

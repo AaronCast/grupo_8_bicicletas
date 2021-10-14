@@ -34,9 +34,23 @@
   "status": "new",
   "colors": "único",
   "price": "1,200",
-  "discount": "",
+  "discount": "0",
   "description": "8.25\" x 32.25\"-  Featherlight Construction.\r\nTail - 6.625\"\r\nNose - 7.125\"\r\nWheel Base - 14.2\"",
   "image": "image1631922887152.jpg",
   "id": 3
+ },
+ {
+  "productName": "sdvz",
+  "model": "dvf",
+  "brand": "",
+  "category": "bicycles",
+  "status": "new",
+  "size": "",
+  "colors": "",
+  "price": "500",
+  "discount": "",
+  "description": "",
+  "image": "default-img.png",
+  "id": 4
  }
 ]
