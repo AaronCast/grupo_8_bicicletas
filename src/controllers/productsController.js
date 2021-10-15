@@ -71,6 +71,13 @@ const productsController = {
         fs.writeFileSync(productsFilePath, JSON.stringify(finalproducts, null, ' '));
         res.redirect('/');
     }
+    // numberVisits: function(req, res){
+    //     if(req.session.numberVisit == undefined){
+    //         req.session.numberVisit = 0;
+    //     }
+    //     req.session.numberVisit++;
+    //     res.send('Visto' + req.session.numberVisit)
+    // }
 }
 
 

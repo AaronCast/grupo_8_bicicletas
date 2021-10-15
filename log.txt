@@ -1,0 +1,1 @@
+ /Se ingresó a la página /product/detail/1 --Se ingresó a la página /login-- --Se ingresó a la página /login--

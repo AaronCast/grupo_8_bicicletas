@@ -19,6 +19,11 @@ const storage = multer.diskStorage({
 const upload = multer({storage: storage});
 
 router.put('/create-user', upload.any() , usersController.create);
+router.get('/login', usersController.login);
+router.post('/login', //[check('email').isEmail(), check(password).isLength({min: 5})]
+ usersController.processLogin);
+
+
 
 
 module.exports = router;

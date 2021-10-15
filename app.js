@@ -1,13 +1,14 @@
 const express = require('express');
 const path = require('path');
 const methodOverride = require('method-override');
-
+const session = require('express-session');
 const app = express();
 
 app.use(express.static(path.join(__dirname, '/public')));
 app.use(express.urlencoded({extended: false}));
 app.use(express.json());
 app.use(methodOverride('_method'));
+app.use(session({secret: 'Secreto!'}));
 
 
 app.set('view engine', 'ejs');
@@ -18,12 +19,18 @@ const indexRouter = require('./src/routes/indexRouter');
 const productsRouter = require('./src/routes/productsRouter');
 const usersRouter = require('./src/routes/usersRouter');
 
+const logMiddleware = require('./middlewares/logMiddleware');
+
+app.use(logMiddleware);
+
 app.use('/', indexRouter);
 app.use('/',productsRouter);
 app.use('/',usersRouter);
 
 app.use('/products', productsRouter);
 app.use('/register', usersRouter);
+
+
 
 
 //app.use((req, res, next) =>{
