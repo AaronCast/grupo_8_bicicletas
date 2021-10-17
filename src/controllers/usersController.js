@@ -1,4 +1,6 @@
 const fs = require('fs');
+const {validationResult} = require('express-validator');
+const bcrypt = require('bcryptjs');
 const path = require('path');
 
 const usersFilePath = path.join(__dirname, '../data/usersDataBase.json');
@@ -15,7 +17,11 @@ const usersController = {
             image = 'default-img.png'
         };
         let newUser = {
-            ...req.body,
+            firstName: req.body.firstName,
+            lastName: req.body.lastName,
+            email: req.body.email,
+            password: bcrypt.hashSync(req.body.password, 10) ,
+            category: req.body.category,
             image: image,
             id: users[users.length - 1].id +1
         };
@@ -28,6 +34,8 @@ const usersController = {
     },
     processLogin: (req, res) => {
         let errors = validationResult(req);
+        console.log(errors);
+
         let userLog
         if(errors.isEmpty()){
             for(let i = 0; i< users.length; i++){
@@ -41,14 +49,16 @@ const usersController = {
             if(userLog == undefined){
                 return res.render('login', {errors: [{msg: 'Credenciales inválidads'}
                 ]
-                });
+                    });
             }
             req.session.userlogued = userLog;
             res.send('Bien hecho');
         }else{
             return res.render('login', {errors: errors.errors});
         }
-    }
+        }
+       
+
 }
 
 

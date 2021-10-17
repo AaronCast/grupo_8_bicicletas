@@ -20,10 +20,9 @@
             <h3>¿No eres miembro?<a class="register" href="#">Regístrate</a></h3>
             <div class="main-form">
                 <form action="/login" method="POST">
-                    <input type="email" name="email-user" placeholder="   Email" 
-                    pattern="^(?=.*[A-Za-z])(?=.*\d)(?=.*[@$!%*#?&])[A-Za-z\d@$!%*#?&]{8,}$"
-                    required>
-                    <input type="password" name="pass" placeholder="  Contraseña" required>
+                    <input type="email" name="email" placeholder="   Email:" >
+                    <!-- pattern="^(?=.*[A-Za-z])(?=.*\d)(?=.*[@$!%*#?&])[A-Za-z\d@$!%*#?&]{8,}$"  -->
+                    <input type="password" name="password" placeholder="  Contraseña" required>
                     <button class="sign-in" type="submit">Ingresa</button>
                 
                 </form>
