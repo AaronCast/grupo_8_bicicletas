@@ -17,11 +17,8 @@ const usersController = {
             image = 'default-img.png'
         };
         let newUser = {
-            firstName: req.body.firstName,
-            lastName: req.body.lastName,
-            email: req.body.email,
-            password: bcrypt.hashSync(req.body.password, 10) ,
-            category: req.body.category,
+            ...req.body,
+            password: bcrypt.hashSync(req.body.password, 10),
             image: image,
             id: users[users.length - 1].id +1
         };
@@ -30,33 +27,56 @@ const usersController = {
         res.redirect('/');
     }, 
     login: (req, res) => {
-        return res.render('login.ejs')
+        return res.render('login.ejs');
+        
     },
     processLogin: (req, res) => {
         let errors = validationResult(req);
         console.log(errors);
 
-        let userLog
-        if(errors.isEmpty()){
-            for(let i = 0; i< users.length; i++){
-                if(users[i].email == req.body.email){
-                    if(bcrypt.compareSync(req.body.password, users[i]. password)){
-                        let userLog = users[i];
-                        break;
-                    }
-                }
+        let userToLog = users.find(user => user.email == req.body.email);
+       
+        if(userToLog){
+            let validPassword = bcrypt.compareSync(req.body.password, userToLog.password);
+            if(validPassword){
+                delete userToLog.password;
+                req.session.userLogged = userToLog;
+                return res.redirect('user/profile');
             }
-            if(userLog == undefined){
-                return res.render('login', {errors: [{msg: 'Credenciales inválidads'}
-                ]
-                    });
-            }
-            req.session.userlogued = userLog;
-            res.send('Bien hecho');
-        }else{
-            return res.render('login', {errors: errors.errors});
+            return res.render('login', {
+            errors: {email: {msg: 'Credenciales Inválidas'}}
+            });
         }
-        }
+
+        // if(errors.isEmpty()){
+        //     for(let i = 0; i< users.length; i++){
+        //         if(users[i].email == req.body.email){
+        //             if(bcrypt.compareSync(req.body.password, users[i]. password)){
+        //                 let userLog = users[i];
+        //                 break;
+        //             }
+        //         }
+        //     }
+        //     if(userLog == undefined){
+        //         return res.render('login', {errors: [{msg: 'Credenciales inválidads'}
+        //         ]
+        //             });
+        //     }
+        //     req.session.userlogued = userLog;
+        //     res.send('Bien hecho');
+        // }else{
+        //     return res.render('login', {errors: errors.errors});
+        // }
+    },
+    profile: (req, res) => {
+        res.render('userProfile', {
+            user: req.session.userLogged
+        });
+    },
+    logout: (req, res) => {
+        req.session.destroy();
+        return res.redirect('/');
+    }
        
 
 }

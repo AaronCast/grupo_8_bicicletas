@@ -42,10 +42,10 @@
  },
  {
   "firstName": "Mono",
-  "lastName": "",
+  "lastName": "T",
   "email": "mono123@gmail",
-  "password": "$2a$10$fUTCkzVA3Jl7vwZvENU49.l.Fwr15LVSPgeLg9052qmg8uPhEjBDm",
-  "category": "usuario",
+  "password": "$2a$10$96Y2sV.97PBT/QWUt/FnjOatr2IehjvtwBa9NDaIbOVfH2wCojx6K",
+  "category": "administrador",
   "image": "default-img.png",
   "id": 4
  }

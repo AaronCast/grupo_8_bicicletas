@@ -13,16 +13,27 @@
         </div>
         <nav class="login">
             <ul class="login-1">
+                <% if(locals.isLogged){ %>
+                   <center> <p>Barra del Usuario: Hi 
+                    <%= locals.userLogged.firstName %>
+                    </p></center>
+                    <div><img src="/img/products/<%= locals.userLogged.image%>" alt=""></div>
+                    <% } else { %>
                 <li ><a href = "/product/create" title="create-product"><i class="fas fa-plus"></i></a>|</li>
                 <li ><a href = "/productCart" title="Carrito" ><i class="fas fa-shopping-cart"></i></a>|</li>
                 <li><a href = "/register"><i class="fas fa-sign-in-alt"></i></a>|</li>
                 <li><a href = "/login"><i class="fas fa-portrait"></i></a>|</li>
+                <% } %>
             </ul>
             <ul class="login-2">
+                <% if(locals.isLogged){ %>
+                    <p>Barra del Usuario</p>
+                    <% } else { %>
                 <li ><a href = "/product/create" title="create" ><i class="fas fa-plus"></i></a>|</li>
                 <li><a href = "/productCart">Mi carrito<i class="fas fa-shopping-cart"></i></a></li>
                 <li><a href = "/register">Registro<i class="fas fa-sign-in-alt"></i></a></li>
                 <li><a href = "/login">Iniciar sesión<i class="fas fa-portrait"></i></a></li>
+                <% } %>
             </ul>
         </nav>
     </div>

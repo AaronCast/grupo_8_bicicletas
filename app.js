@@ -8,20 +8,24 @@ app.use(express.static(path.join(__dirname, '/public')));
 app.use(express.urlencoded({extended: false}));
 app.use(express.json());
 app.use(methodOverride('_method'));
-app.use(session({secret: 'Secreto!'}));
+app.use(session({secret: 'Secreto!',resave: false, saveUninitialized: false,}));
 
 
 app.set('view engine', 'ejs');
 app.set('views', path.join(__dirname, './src/views'));
+
+const logMiddleware = require('./src/middlewares/logMiddleware');
+const userLoggedMiddleware = require('./src/middlewares/userLoggedMiddleware');
+
+
 
 /* Rutas */
 const indexRouter = require('./src/routes/indexRouter');
 const productsRouter = require('./src/routes/productsRouter');
 const usersRouter = require('./src/routes/usersRouter');
 
-const logMiddleware = require('./middlewares/logMiddleware');
-
 app.use(logMiddleware);
+app.use(userLoggedMiddleware);
 
 app.use('/', indexRouter);
 app.use('/',productsRouter);
@@ -29,6 +33,7 @@ app.use('/',usersRouter);
 
 app.use('/products', productsRouter);
 app.use('/register', usersRouter);
+
 
 
 

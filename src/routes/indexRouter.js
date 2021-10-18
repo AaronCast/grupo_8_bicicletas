@@ -3,10 +3,12 @@ const { index } = require('../controllers/indexController');
 const router = express.Router();
 
 const indexController = require('../controllers/indexController');
+const guestMiddleware = require('../middlewares/guestMiddleware');
+
 
 router.get('/', indexController.index);
-router.get('/login', indexController.login);
-router.get('/register', indexController.register);
+router.get('/login', guestMiddleware, indexController.login);
+router.get('/register', guestMiddleware, indexController.register);
 router.get('/productCart', indexController.productCar)
 router.get('/search', indexController.search);
 
