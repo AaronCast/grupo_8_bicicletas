@@ -80,6 +80,7 @@ const usersController = {
         console.log(req.cookies.userEmail);
     },
     logout: (req, res) => {
+        res.clearCookie('userEmail');
         req.session.destroy();
         return res.redirect('/');
     }
