@@ -2,6 +2,7 @@ const express = require('express');
 const path = require('path');
 const methodOverride = require('method-override');
 const session = require('express-session');
+const cookies = require('cookie-parser');
 const app = express();
 
 app.use(express.static(path.join(__dirname, '/public')));
@@ -9,7 +10,7 @@ app.use(express.urlencoded({extended: false}));
 app.use(express.json());
 app.use(methodOverride('_method'));
 app.use(session({secret: 'Secreto!',resave: false, saveUninitialized: false,}));
-
+app.use(cookies());
 
 app.set('view engine', 'ejs');
 app.set('views', path.join(__dirname, './src/views'));
