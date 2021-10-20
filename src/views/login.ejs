@@ -20,19 +20,21 @@
             <h3>¿No eres miembro?<a class="register" href="/register">Regístrate</a></h3>
             <div class="main-form">
                 <form action="/login" method="POST">
-                   
+                    
+                    <% if(locals.errors && errors.email){ %>
                     <input type="email" name="email" placeholder="   Email:" required>
                     <!-- pattern="^(?=.*[A-Za-z])(?=.*\d)(?=.*[@$!%*#?&])[A-Za-z\d@$!%*#?&]{8,}$"  -->
-                   
                     <input type="password" name="password" placeholder="  Contraseña" required>
                     <button class="sign-in" type="submit">Ingresa</button>
-
+                    <div class= 'error'>
+                        <%= errors.email.msg %>
+                    </div>
                     <div>
                         <label>Recordar usuario
                             <input type="checkbox" name="remember"> Recordar usuario
                         </label>    
                     </div>
-                
+                    <}%>
                 </form>
                 <a class="recover-password" href="#">Olvidaste tu contraseña</a>
             </div>
