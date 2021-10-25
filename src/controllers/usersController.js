@@ -1,4 +1,5 @@
 const fs = require('fs');
+const db = require('../database/models');
 const {validationResult} = require('express-validator');
 const bcrypt = require('bcryptjs');
 const path = require('path');
@@ -9,8 +10,31 @@ const users = JSON.parse(fs.readFileSync(usersFilePath, 'utf-8'));
 
 const usersController = {
     create: (req, res) => {
+       
+        const resultValidation = validationResult(req);
+
+        if (resultValidation.errors.length > 0) {
+            return res.render('register', {
+                errors: resultValidation.mapped(),
+                oldData: req.body
+            });
+        }
+        
+        let userInDB = User.findByField('email', req.body.email);
+    
+        if (userInDB) {
+            return res.render('register', {
+                errors: {
+                email: {
+                    msg: 'Este email ya está registrado'
+                }},
+                    oldData: req.body
+                });
+        }
+            
         let image
         console.log(req.files);
+        
         if(req.files[0] != undefined){
             image = req.files[0].filename
         } else{
@@ -24,7 +48,7 @@ const usersController = {
         };
         users.push(newUser);
         fs.writeFileSync(usersFilePath, JSON.stringify(users, null, ' '));
-        res.redirect('/');
+        res.redirect('/login');
     }, 
     login: (req, res) => {
         return res.render('login.ejs');
@@ -52,6 +76,7 @@ const usersController = {
             errors: {email: {msg: 'Credenciales Inválidas'}}
             });
         }
+        
 
         // if(errors.isEmpty()){
         //     for(let i = 0; i< users.length; i++){
