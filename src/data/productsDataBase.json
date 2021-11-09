@@ -1,17 +1,7 @@
 [
  {
-  "productName": "Bicicleta Vintage Loving Monk Loving Urbana",
-  "model": "Loving",
-  "brand": "Monk",
-  "category": "bicycles",
-  "status": "new",
-  "size": "24'' (9-11 años)",
-  "colors": "",
-  "price": "6,500.00",
-  "discount": "10",
-  "description": "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Ex illo soluta tenetur asperiores nostrum, voluptas necessitatibus iste eum quidem nemo cum magnam impedit suscipit saepe veniam cumque accusamus officia porro?",
-  "image": "image1631920301180.jpg",
-  "id": 1
+  "id": 1,
+  "image": "image1631920301180.jpg"
  },
  {
   "productName": "Casco Rockbros Ciclismo Ruta/montaña Ajustable 3 En 1 ",
@@ -27,56 +17,46 @@
   "id": 2
  },
  {
-    "productName": "Element Skateboard Bam Margera Trophy 8.25",
-    "model":" Bam Margera",
-    "bran": "Element",
-    "category": "skateboard",
-    "status": "new",
-    "colors": "único",
-    "price": "1,200",
-    "discount": 0,
-    "description": "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Ex illo soluta tenetur asperiores nostrum, voluptas necessitatibus iste eum quidem nemo cum magnam impedit suscipit saepe veniam cumque accusamus officia porro?",
-    "image": "image1631922887152.jpg",
-    "id": 3
+  "productName": "Element Skateboard Bam Margera Trophy 8.25",
+  "model": " Bam Margera",
+  "bran": "Element",
+  "category": "skateboard",
+  "status": "new",
+  "colors": "único",
+  "price": "1,200",
+  "discount": 0,
+  "description": "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Ex illo soluta tenetur asperiores nostrum, voluptas necessitatibus iste eum quidem nemo cum magnam impedit suscipit saepe veniam cumque accusamus officia porro?",
+  "image": "image1631922887152.jpg",
+  "id": 3
  },
  {
-    "productName": "Element Skateboard Bam Margera Trophy 8.25",
-    "model":" Bam Margera",
-    "bran": "Element",
-    "category": "skateboard",
-    "status": "new",
-    "colors": "único",
-    "price": "1,200",
-    "discount": 0,
-    "description": "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Ex illo soluta tenetur asperiores nostrum, voluptas necessitatibus iste eum quidem nemo cum magnam impedit suscipit saepe veniam cumque accusamus officia porro?",
-    "image": "image1631922887152.jpg",
-    "id": 4
+  "productName": "Element Skateboard Bam Margera Trophy 8.25",
+  "model": " Bam Margera",
+  "bran": "Element",
+  "category": "skateboard",
+  "status": "new",
+  "colors": "único",
+  "price": "1,200",
+  "discount": 0,
+  "description": "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Ex illo soluta tenetur asperiores nostrum, voluptas necessitatibus iste eum quidem nemo cum magnam impedit suscipit saepe veniam cumque accusamus officia porro?",
+  "image": "image1631922887152.jpg",
+  "id": 4
  },
  {
-    "productName": "Element Skateboard Bam Margera Trophy 8.25",
-    "model":" Bam Margera",
-    "bran": "Element",
-    "category": "skateboard",
-    "status": "new",
-    "colors": "único",
-    "price": "1,200",
-    "discount": 0,
-    "description": "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Ex illo soluta tenetur asperiores nostrum, voluptas necessitatibus iste eum quidem nemo cum magnam impedit suscipit saepe veniam cumque accusamus officia porro?",
-    "image": "image1631922887152.jpg",
-    "id": 5
+  "productName": "Element Skateboard Bam Margera Trophy 8.25",
+  "model": " Bam Margera",
+  "bran": "Element",
+  "category": "skateboard",
+  "status": "new",
+  "colors": "único",
+  "price": "1,200",
+  "discount": 0,
+  "description": "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Ex illo soluta tenetur asperiores nostrum, voluptas necessitatibus iste eum quidem nemo cum magnam impedit suscipit saepe veniam cumque accusamus officia porro?",
+  "image": "image1631922887152.jpg",
+  "id": 5
  },
  {
-    "productName": "Element Skateboard Bam Margera Trophy 8.25",
-    "model":" Bam Margera",
-    "bran": "Element",
-    "category": "skateboard",
-    "status": "new",
-    "colors": "único",
-    "price": "1,200",
-    "discount": 0,
-    "description": "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Ex illo soluta tenetur asperiores nostrum, voluptas necessitatibus iste eum quidem nemo cum magnam impedit suscipit saepe veniam cumque accusamus officia porro?",
-    "image": "image1631922887152.jpg",
-    "id": 6
+  "id": 6,
+  "image": "image1631922887152.jpg"
  }
- 
 ]

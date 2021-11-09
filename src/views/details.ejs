@@ -30,7 +30,7 @@
 
             <div>
                 <section class="part-1">
-                    <h3><%= product.productName %></h3>
+                    <h3><%= product.name %></h3>
                     <div class="model">
                         <p><%= product.model %></p>
                         <p><%=product.brand %></p>
@@ -63,14 +63,14 @@
                
                 <div class="cost">
                     <h3 class="price">Precio: </h3>
-                    <h3 class="cost">$ <%= toThousand(product.price) %></h3>
+                    <h3 class="cost">$ <%= product.price %></h3>
                     <section class="buy-detail">
                         <% if(product.discount > 0) {
                             let finalPrice = (product.price * ((100 - product.discount) / 100)).toFixed(0) %>
                         <p class="discount"><%= product.discount %> %OFF</p>
-                        <p class="final-price"><%= toThousand(finalPrice) %></p>
+                        <p class="final-price">$ <%= finalPrice %></p>
                         <% } else { %>
-                        <p class="final-price">$ <%= toThousand(product.price) %></p>
+                        <p class="final-price">$ <%= product.price %></p>
                         <% } %>
                         <button class="button-car" type="submit">Agregar al carrito<i class="fas fa-shopping-cart"></i></button>
                         <div class="caracteristics">

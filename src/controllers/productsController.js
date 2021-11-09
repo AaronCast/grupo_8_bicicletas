@@ -1,69 +1,87 @@
 const fs = require('fs');
 const path = require('path');
+const db = require('../database/models');
 
 const productsFilePath = path.join(__dirname, '../data/productsDataBase.json');
 const products = JSON.parse(fs.readFileSync(productsFilePath, 'utf-8'));
 
 const toThousand = n => n.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ".");
-
+const Products = db.Product;
 
 const productsController = {
     index: (req, res) => {
-        res.render('products', {products: products, toThousand});
+        Products.findAll()
+        .then((products) => {
+            res.render('products', {products:products})
+        })
     },
     details: (req, res) => {
-        let product = products.find(product => product.id == req.params.id);
-        console.log(product);
-        res.render('details', {product:product, toThousand});
+        let productId = req.params.id;
+        Products.findByPk(productId)
+        .then((product) => {
+            res.render('details.ejs', {product:product})
+           console.log(product)
+        })
+        
     },
     viewCreate: (req, res) =>{
         res.render('createProduct');
     }, 
     create: (req, res) => {
-        let image
-        console.log(req.files);
-        if(req.files[0] != undefined){
-            image = req.files[0].filename
-        } else{
-            image = 'default-img.png'
-        };
-        let newProduct = {
-            ...req.body,
-            image: image,
-            id: products[products.length - 1].id +1
-        };
-        products.push(newProduct);
-        fs.writeFileSync(productsFilePath, JSON.stringify(products, null, ' '));
-        res.redirect('/');
+        db.Products.create({
+            name: req.body.name,
+            model: req.body.model,
+            category: req.body.category,
+            status: req.body.status,
+            colors: req.body.colors,
+            price: req.body.price,
+            discount: req.body.discount,
+            image: req.body.image,
+            description: req.body.description,
+            size: req.body.size,
+        })
+        .then(()=> {
+            if(req.files[0] != undefined){
+                image = req.files[0].filename
+            } else{
+                image = 'default-img.png'
+            }
+            res.redirect('/');
+        })
+      
     },
     edit: (req, res) => {
-        let id = req.params.id
-        let productToEdit = products.find(product => product.id == id);
-        res.render('editProduct.ejs', {productToEdit});
+        let productId = req.params.id;
+        Products.findByPk(productId)
+        .then((productToEdit)=> {
+            res.render('editProduct.ejs', {productToEdit});
+        })
+        .catch(error => res.send(error))
     },
     update: (req, res) => {
-        let id = req.params.id;
-        let productToEdit = products.find(product => product.id == id);
-
-        // if(req.files[0] != undefined){
-        //     image = req.files[0].filename
-        // } else{
-        //     image = 'default-img.png'
-        // };
-        productToEdit = {
-            id: productToEdit.id,
-            ...req.body,
-            image: productToEdit.image
-        };
-
-        let newProducts = products.map(product => {
-            if(product.id == productToEdit.id){
-                return product = {...productToEdit}
-            }
-            return product
-        });
-        fs.writeFileSync(productsFilePath, JSON.stringify(newProducts, null, ' '));
-        res.redirect('/');
+        let productId = req.params.id;
+        Products.update(
+            {
+                name: req.body.name,
+                model: req.body.model,
+                category: req.body.category,
+                status: req.body.status,
+                colors: req.body.colors,
+                price: req.body.price,
+                discount: req.body.discount,
+                image: req.body.image,
+                description: req.body.description,
+                size: req.body.size,
+        },{where: {id: productId}})
+        .then(()=> {
+            // if(req.files[0] != undefined){
+            //     image =req.files[0].filename
+            // }else{
+            //     image = 'default-img.png'
+            // }
+            return res.redirect('/')
+        })
+        .catch(error => res.send(error))       
     },
     destroy: (req, res) => {
         let id = req.params.id;
