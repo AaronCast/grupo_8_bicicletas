@@ -1,6 +1,6 @@
 const fs = require('fs');
-const path = require('path');
 const db = require('../database/models');
+const path = require('path');
 
 const productsFilePath = path.join(__dirname, '../data/productsDataBase.json');
 const products = JSON.parse(fs.readFileSync(productsFilePath, 'utf-8'));
@@ -25,10 +25,14 @@ const productsController = {
         
     },
     viewCreate: (req, res) =>{
-        res.render('createProduct');
+        Products.findAll()
+        .then(()=> {
+            return res.render('createProduct');
+        })
+        .catch(error => res.send(error))
     }, 
     create: (req, res) => {
-        db.Products.create({
+        Products.create({
             name: req.body.name,
             model: req.body.model,
             category: req.body.category,
@@ -39,6 +43,7 @@ const productsController = {
             image: req.body.image,
             description: req.body.description,
             size: req.body.size,
+            brand: req.body.brand
         })
         .then(()=> {
             if(req.files[0] != undefined){
@@ -46,8 +51,9 @@ const productsController = {
             } else{
                 image = 'default-img.png'
             }
-            res.redirect('/');
+            return res.redirect('/');
         })
+        .catch(error => res.send(error))
       
     },
     edit: (req, res) => {
@@ -72,7 +78,8 @@ const productsController = {
                 image: req.body.image,
                 description: req.body.description,
                 size: req.body.size,
-        },{where: {id: productId}})
+                brand: req.body.brand
+            },{where: {id: productId}})
         .then(()=> {
             // if(req.files[0] != undefined){
             //     image =req.files[0].filename

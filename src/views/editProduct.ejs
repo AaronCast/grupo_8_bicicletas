@@ -12,13 +12,13 @@
     </head>
     <body>
         <%- include('partials/topHeader') %>
-        <main>
+      
             <center><h1>Editar Producto:</h1></center>
-            <form action="/product/<%= productToEdit.id %>/edit?_method=PATCH" enctype= 'multipart/form-data' method="POST">
-                <hr><br>
+            <form action="/product/update/<%= productToEdit.id%>?_method=PUT" enctype= 'multipart/form-data' method="POST">
+                <br>
                 <center>
-                    <label for="productName">Nombre:</label>
-                    <input class="main-input" type="text" name="name" id="productName" value="<%= productToEdit.name %>" >
+                    <label for="name">Nombre:</label>
+                    <input class="main-input" type="text" name="name" id="name" value="<%= productToEdit.name %>" >
                     
                     <label for="model">Modelo:</label>
                     <input class="main-input" type="text" name="model" value="<%= productToEdit.model %>" required>
@@ -26,70 +26,12 @@
                     <label for="brand">Marca:</label>
                     <input class="main-input" type="text" name="brand" value = "<%= productToEdit.brand %>">
                 
-                <div class="category-section">
-                    <h3 class="category">Categoría:</h3>
-                        <select class="category-menu" name="category" id="category">
-                            <option value="bicycles" >Bicicletas</option>
-                            <option value="bamboocycles">Bamboocycles</option>
-                            <option value="rollerskate">Patines</option>
-                            <option value="skateboard">Skateboard</option>
-                            <option value="accessories">Accesorios</option>
-                        </select>
-                </div>
-                <div>
-                    <h3 class="status">Status:</h3>
-                        <select class="status-section" name="status" >
-                            <option value="new">Nuevo</option>
-                            <option value="in-sale">Rebaja</option>
-                            <option value="visited">Lo más visto</option>
-                        </select>
-                </div>
-                <div>
-                    <h3 class="size">Seleccione talla(s):</h3>
-                    <section class="size-section"> 
-                        <section>
-                            <input type="checkbox" name="size" value="10'' (1-4 años)"> 10'' (1-4 años)</label>
-                        </section>
-                        <section>
-                            <input type="checkbox" name="size" value="16'' (4-6 años)"> 16'' (4-6 años)</label>
-                        </section> 
-                        <section>
-                            <input type="checkbox" name="size" value="20'' (6-9 años)"> 20'' (6-9 años)</label>
-                        </section> 
-                        <section>
-                            <input type="checkbox" name="size" value="24'' (9-11 años)"> 24'' (9-11 años)</label>
-                        </section>
-                        <section>
-                            <input type="checkbox" name="size" value="26'' (11+ años)"> 26'' (11+ años)</label>
-                        </section> 
-                        <section>
-                            <input type="checkbox" name="size" value="27.5'' (155cms a 175cms)"> 27.5'' (155cms a 175cms)</label>
-                        </section> 
-                        <section>
-                            <input type="checkbox" name="size" value="29'' (160 en adelante)"> 29'' (160 en adelante)</label>
-                        </section>
-                        <input class="other-size" type="text" name="size" placeholder="Otra medida...">
-                </div>
-
-                <label for="colors">Colores:</label>
-                <input class="color-section" type="text" name="colors" value= '<%= productToEdit.colors %>'>
-
-                <div class="cost-section">
-                    <label for="price">Precio:</label>
-                    <input class="price-section" type="text" name="price" value="<%= productToEdit.price %>" >
-
-                    <label for="discount">Descuento:</label>
-                    <input class="discount-section" type="text" name="discount" value="<%= productToEdit.discount %>" >
-                </div>
-                <section>
-                    <label for="description">Descripción:</label> 
-                    <textarea class="description" name="description" id="description"><%= productToEdit.description %></textarea>
-                </section>
-                <label for="productImage">Selecciona imágen(es):</label>
+               
                 <input class="upload-file" type="file" name="image" id="image" multiple><br>
-                <button class="update" type="submit">Actualizar</button></center> 
+                <button class="update" type="submit">Actualizar</button>
+                </center> 
             </form>
             <%- include('partials/footer') %>
-        </main>
+       
     </body>
 </html>

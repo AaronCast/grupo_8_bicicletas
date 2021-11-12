@@ -21,12 +21,17 @@
         <main>
             <h4><a href="#">Productos Nuevos</a></h4>
             <div class="new-products">
+                <% for(let i = 0; i < products.length; i++) {
+                    let finalPrice = (products[i].price * ((100 - products[i].discount) / 100)).toFixed(0) %>
                 <article class="main-article">
-                    <% for(let i = 0; i < products.length; i++) { 
-                        let finalPrice = (products[i].price * ((100 - products[i].discount) / 100)).toFixed(0) %>
                     <section>
-                        <img src="/img/products/<%= products[i].image %>" alt="product-1">
+                        <% if (products[i].image !== null ) { %>
+                        <img src= "/img/products/<%= products[i].image %>" alt="product-img">
+                        <% } else { %>
+                        <img src= "/img/products/default-img.png" alt= "product-img">
+                        <% } %>      
                     </section>
+                  
                     <h3><%= products[i].name %></h3>
                     <div class="model">
                         <p><%= products[i].model %></p>
@@ -40,11 +45,11 @@
                     <p class="description">
                         <%= products[i].description %>
                     </p>
-                    <div class="details-link"><a href="/product/detail/<%= products[i].id %>">Ver más</a>
+                    <div class="details-link">
+                        <a href="/product/detail/<%= products[i].id %>">Ver más</a>
                     </div>
-                    <% } %>
                 </article>
-              
+                <% } %>
             </div>
             <h4>Los más buscados</h4>
             <div class="commonly">

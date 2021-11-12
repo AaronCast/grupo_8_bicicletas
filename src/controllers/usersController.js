@@ -20,7 +20,7 @@ const usersController = {
             });
         }
         
-        let userInDB = User.findByField('email', req.body.email);
+        let userInDB = db.User.findByField('email', req.body.email);
     
         if (userInDB) {
             return res.render('register', {

@@ -21,11 +21,11 @@ const upload = multer({storage: storage});
 
 router.get('/', productsController.index);
 router.get('/products', productsController.index);
+router.get('/product/detail/:id', productsController.details);
 router.get('/product/create', productsController.viewCreate);
 router.put('/product/create', upload.any() , productsController.create);
-router.get('/product/detail/:id', productsController.details);
-router.get('/product/:id/edit', productsController.edit);
-router.patch('/product/:id/edit', productsController.update);
+router.get('/product/edit/:id', productsController.edit);
+router.put('/product/update/:id', productsController.update);
 
 
 

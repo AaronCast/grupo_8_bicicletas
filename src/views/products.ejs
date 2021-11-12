@@ -6,30 +6,33 @@
         <main>
             <h4>Todos los productos</h4>
             <div class="new-products">
-
-                <% products.forEach(product => {
-                    let finalPrice = (product.price * ((100 - product.discount) / 100)).toFixed(0) %>
+                <% for(let i = 0; i < products.length; i++) {
+                    let finalPrice = (products[i].price * ((100 - products[i].discount) / 100)).toFixed(0) %>
                 <article class="main-article">
                     <section>
-                        <img src="/img/products/<%= product.image %>" alt="product-1">
+                        <% if (products[i].image !== null ) { %>
+                            <img src= "/img/products/<%= products[i].image %>" alt="product-img">
+                            <% } else { %>
+                            <img src= "/img/products/default-img.png" alt= "product-img">
+                            <% } %>
                     </section>
-                    <h3><%= product.productName %></h3>
+                    <h3><%= products[i].name %></h3>
                     <div class="model">
-                        <p><%= product.model %></p>
-                        <p><%=product.brand %></p>
+                        <p><%= products[i].model %></p>
+                        <p><%=products[i].brand %></p>
                         <div>
-                            <p class="price">$ <%= product.price %></p>
-                            <p class="discount"><%= product.discount %> %OFF</p>
+                            <p class="price">$ <%= products[i].price %></p>
+                            <p class="discount"><%= products[i].discount %> %OFF</p>
                         </div>
-                        <p class="final-price"><%= toThousand(finalPrice) %></p>
+                        <p class="final-price"><%= finalPrice %></p>
                     </div>
                     <p class="description">
-                        <%= product.description %>
+                        <%= products[i].description %>
                     </p>
-                    <div class="details-link"><a href="/product/detail/<%= product.id %>">Ver más</a>
+                    <div class="details-link"><a href="/product/detail/<%= products[i].id %>">Ver más</a>
                     </div>
                 </article>
-                <% }) %>
+                <% } %>
             </div>
             <%- include('partials/footer') %>
         </main>

@@ -40,6 +40,9 @@ module.exports = (sequelize, DataTypes) => {
         },
         size: {
             type: DataTypes.STRING
+        },
+        brand: {
+            type: DataTypes.STRING
         }
     };
     let config = {
