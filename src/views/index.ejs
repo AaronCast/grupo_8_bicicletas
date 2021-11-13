@@ -19,13 +19,13 @@
         </div>
         
         <main>
-            <h4><a href="#">Productos Nuevos</a></h4>
+            <h4>Productos Nuevos</h4>
             <div class="new-products">
                 <% for(let i = 0; i < products.length; i++) {
                     let finalPrice = (products[i].price * ((100 - products[i].discount) / 100)).toFixed(0) %>
                 <article class="main-article">
                     <section>
-                        <% if (products[i].image !== null ) { %>
+                        <% if (products[i].image !== null || '' ) { %>
                         <img src= "/img/products/<%= products[i].image %>" alt="product-img">
                         <% } else { %>
                         <img src= "/img/products/default-img.png" alt= "product-img">

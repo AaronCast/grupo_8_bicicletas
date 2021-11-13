@@ -17,7 +17,12 @@
         <main>
             <div class="product-details">
                 <div class= "main-image">
-                    <img src="/img/products/<%= product.image %>" alt="main-image">
+                    <% if (product.image !== null ) { %>
+                        <img src= "/img/products/<%= product.image %>" alt="product-img">
+                        <% } else { %>
+                        <img src= "/img/products/default-img.png" alt= "product-img">
+                        <% } %>
+                   
                 </div>
                 <section class="details-img">
                     <ul>
@@ -90,6 +95,8 @@
                         </section>
                         <div>
                             <a href="/product/edit/<%= product.id%>">Editar</a>
+                            <a href="/product/delete/<%= product.id %>"> Eliminar</a>
+
                         </div>
                     </section>
                         

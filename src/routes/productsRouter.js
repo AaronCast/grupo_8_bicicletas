@@ -25,7 +25,10 @@ router.get('/product/detail/:id', productsController.details);
 router.get('/product/create', productsController.viewCreate);
 router.put('/product/create', upload.any() , productsController.create);
 router.get('/product/edit/:id', productsController.edit);
-router.put('/product/update/:id', productsController.update);
+router.put('/product/update/:id', upload.any(), productsController.update);
+router.get('/product/delete/:id', productsController.delete);
+router.delete('/product/delete/:id', productsController.destroy);
+
 
 
 

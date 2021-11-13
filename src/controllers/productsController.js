@@ -90,11 +90,23 @@ const productsController = {
         })
         .catch(error => res.send(error))       
     },
+    delete: (req, res) => {
+        let productId = req.params.id;
+        Products.findByPk(productId)
+        .then((product) => {
+            return res.render('delete.ejs', {product})
+        })
+        .catch(error => res.send(error))
+
+    },
     destroy: (req, res) => {
-        let id = req.params.id;
-        let finalProducts = products.filter(product => product.id != id);
-        fs.writeFileSync(productsFilePath, JSON.stringify(finalproducts, null, ' '));
-        res.redirect('/');
+        let productId = req.params.id;
+        Products.destroy({where: {id: productId}, force: true})
+        .then(() => {
+            return res.redirect('/')
+        })
+        .catch(error => res.send(error))
+        
     }
     // numberVisits: function(req, res){
     //     if(req.session.numberVisit == undefined){
