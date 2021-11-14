@@ -67,7 +67,7 @@ section.logo{
 div.navbar input{
     border: 3.5px solid #474747;
     border-radius: 10px;
-    width: 60%;
+    width: 85%;
     position: relative;
     background-color: #e8e0e06b;
 }
@@ -84,7 +84,13 @@ div.navbar i{
     right: 50px;
     z-index: 3;
 }
-
+div.profile-section{
+    width: 40px;
+    color: #474747;
+}
+div.profile-section i{
+    font-size: 30px;
+}
 nav.product-list-2{
     display: none;
 }
