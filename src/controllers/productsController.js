@@ -40,14 +40,14 @@ const productsController = {
             colors: req.body.colors,
             price: req.body.price,
             discount: req.body.discount,
-            image: req.body.image,
+            // image: req.file.filename,
             description: req.body.description,
             size: req.body.size,
             brand: req.body.brand
         })
         .then(()=> {
            
-            console.log(req.files)
+            console.log(req.file)
             return res.redirect('/');
         })
         .catch(error => res.send(error))
