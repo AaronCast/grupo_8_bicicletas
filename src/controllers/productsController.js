@@ -46,11 +46,8 @@ const productsController = {
             brand: req.body.brand
         })
         .then(()=> {
-            if(req.files[0] != undefined){
-                image = req.files[0].filename
-            } else{
-                image = 'default-img.png'
-            }
+           
+            console.log(req.files)
             return res.redirect('/');
         })
         .catch(error => res.send(error))
