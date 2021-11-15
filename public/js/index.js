@@ -2,7 +2,20 @@ window.addEventListener('load', (e) => {
     let indexArrow = document.querySelector('.more');
     let indexMenu = document.querySelector('.submenu ul');
 
+    indexMenu.style.display = 'none'
+    
     indexArrow.addEventListener('click', (e) => {
-        indexMenu.style.display = 'none'
+        let menuOff = indexMenu.style.display = 'none';
+        let menuOn = indexMenu.style.display = 'block'
+        menuOff
+        if(menuOn){
+            menuOff
+        }else{
+            menuOn
+        }
+        console.log(e)
+        
+        
     })
+   
 })

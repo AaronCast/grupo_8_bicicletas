@@ -7,6 +7,7 @@ const path = require('path');
 const usersFilePath = path.join(__dirname, '../data/usersDataBase.json');
 const users = JSON.parse(fs.readFileSync(usersFilePath, 'utf-8'));
 
+const Users = db.User;
 
 const usersController = {
     create: (req, res) => {
@@ -20,7 +21,7 @@ const usersController = {
             });
         }
         
-        let userInDB = db.User.findByField('email', req.body.email);
+        let userInDB = Users.findByField('email', req.body.email);
     
         if (userInDB) {
             return res.render('register', {
