@@ -66,7 +66,7 @@ Retrospectiva
 ****************************************
                     //SPRINT 4:
 1. Comenzar a hacer:
-a) Configurar Trello y elejir las qué actividades realizaremos.
+a) Configurar Trello y elegir las qué actividades realizaremos.
 b) Generar los JSON de productos y de usuarios.
 c) Revisar que los CRUD funcionen adecuadamente.
 
@@ -76,6 +76,26 @@ b) Propuesta de cambios en los estilos.
 
 3. Continuar haciendo:
 a) Propuestas para depurar.
+
+4. Hacer menos:
+a) Por el momento dejar en segundo plano la configuración en los estilos.
+
+5. Dejar de hacer:
+a) Algunas características relacionadas con los estilos mostrados en los wireframes.
+****************************************
+                    //SPRINT 5:
+1. Comenzar a hacer:
+a) Configurar Trello y elegir las qué actividades realizaremos.
+b) Generar la lógica para el formulario de registro.
+c) Generar la lógica para el formulario del login.
+d) Implementar las rutas de huéspedes y de usuarios.
+
+2. Hacer más:
+a) Proponer mejoras sobre la lógica.
+
+3. Continuar haciendo:
+a) Propuestas para depurar el código.
+b) Señalar los errores.
 
 4. Hacer menos:
 a) Por el momento dejar en segundo plano la configuración en los estilos.

@@ -26,13 +26,28 @@
         <form class="form" action="/create-user?_method=PUT" enctype='multipart/form-data' method="POST">
             <hr><br>
             <label for="firstName"> Nombre (s)</label>
-            <input type="text" name="firstName" id="firstName" placeholder="Nombre (s)"><br>
+            <input type="text" name="firstName" id="firstName" placeholder="Nombre (s)" 
+            value="<%= locals.oldData ? oldData.firstName : null %>"><br>
+            <% if(locals.errors && errors.firstName) { %>
+                <div style="color: red;"> <%= errors.firstName.msg %> </div>
+            <% } %>
             <label for="lastName"> Apellidos (s)</label>
-            <input type="text" name="lastName" id="lastName" placeholder="Apellido Paterno"><br>
+            <input type="text" name="lastName" id="lastName" placeholder="Apellido Paterno"
+            value="<%= locals.oldData ? oldData.lastName : null %>"><br>
+            <% if(locals.errors && errors.lastName) { %>
+                <div style="color: red;"> <%= errors.lastName.msg %> </div>
+            <% } %>
             <label for="email"> E-mail</label>
-            <input type="email" name="email" id="email" placeholder="Correo electrónico"><br>
+            <input type="email" name="email" id="email" placeholder="Correo electrónico"
+            value="<%= locals.oldData ? oldData.email : null %>"><br>
+            <% if(locals.errors && errors.email) { %>
+                <div style="color: red;"> <%= errors.email.msg %> </div>
+            <% } %>
             <label for="password">Password</label>
             <input type="password" name="password" id="password" placeholder="Contraseña (8 caracteres mínimo)"><br> 
+            <% if(locals.errors && errors.password) { %>
+                <div style="color: red;"> <%= errors.password.msg %> </div>
+            <% } %>
             <label for="category">Categoria</label>
             <select name="category" id="category">
                 <option name="usuario" value="usuario">Usuario</option>

@@ -48,5 +48,21 @@
   "category": "administrador",
   "image": "default-img.png",
   "id": 4
+ },
+ {
+  "id": 5,
+  "firstName": "Mono",
+  "lastName": "S",
+  "email": "mono123@gmail.com",
+  "password": "$2a$10$UgSeAmZZ4dnRIhPNtYat6.HR/am4KL8jmJsccXC9yuL0JgoDkvMXq",
+  "category": "usuario"
+ },
+ {
+  "id": 6,
+  "firstName": "Prueba",
+  "lastName": "S",
+  "email": "prueba123@gmail.com",
+  "password": "$2a$10$pyc8T9rrQU2uxug75/BomOKVC7zE5d1XfGdO21GfwmIrLrqlM..By",
+  "category": "usuario"
  }
 ]

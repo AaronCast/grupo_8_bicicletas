@@ -9,7 +9,7 @@ const guestMiddleware = require('../middlewares/guestMiddleware');
 router.get('/', indexController.index);
 router.get('/login', guestMiddleware, indexController.login);
 router.get('/register', guestMiddleware, indexController.register);
-router.get('/productCart', indexController.productCar)
+router.get('/productCar', indexController.productCar)
 router.get('/search', indexController.search);
 
 module.exports = router;

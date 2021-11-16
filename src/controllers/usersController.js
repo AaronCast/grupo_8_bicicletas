@@ -3,11 +3,12 @@ const db = require('../database/models');
 const {validationResult} = require('express-validator');
 const bcrypt = require('bcryptjs');
 const path = require('path');
+const User = require('../model/UserJSON');
 
 const usersFilePath = path.join(__dirname, '../data/usersDataBase.json');
 const users = JSON.parse(fs.readFileSync(usersFilePath, 'utf-8'));
 
-const Users = db.User;
+// const Users = db.User;
 
 const usersController = {
     create: (req, res) => {
@@ -21,7 +22,7 @@ const usersController = {
             });
         }
         
-        let userInDB = Users.findByField('email', req.body.email);
+        let userInDB = User.findByField('email', req.body.email);
     
         if (userInDB) {
             return res.render('register', {
@@ -32,24 +33,22 @@ const usersController = {
                     oldData: req.body
                 });
         }
-            
         let image
-        console.log(req.files);
+        let userToCreate = {
+            ...req.body,
+            password: bcrypt.hashSync(req.body.password, 10),
+            // image: req.file.filename
+
+        }
         
         if(req.files[0] != undefined){
             image = req.files[0].filename
         } else{
             image = 'default-img.png'
         };
-        let newUser = {
-            ...req.body,
-            password: bcrypt.hashSync(req.body.password, 10),
-            image: image,
-            id: users[users.length - 1].id +1
-        };
-        users.push(newUser);
-        fs.writeFileSync(usersFilePath, JSON.stringify(users, null, ' '));
-        res.redirect('/login');
+        let userCreated = User.create(userToCreate);
+          
+        return res.redirect('/login');
     }, 
     login: (req, res) => {
         return res.render('login.ejs');
