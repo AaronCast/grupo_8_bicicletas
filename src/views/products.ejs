@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+    <%- include('partials/head', {title: 'Todos los productos'}) %>
+    <body>
+        <%- include('partials/topHeader') %>
+        <main>
+            <h4>Todos los productos</h4>
+            <div class="new-products">
+                <% for(let i = 0; i < products.length; i++) {
+                    let finalPrice = (products[i].price * ((100 - products[i].discount) / 100)).toFixed(0) %>
+                <article class="main-article">
+                    <section>
+                        <% if (products[i].image !== null ) { %>
+                            <img src= "/img/products/<%= products[i].image %>" alt="product-img">
+                            <% } else { %>
+                            <img src= "/img/products/default-img.png" alt= "product-img">
+                            <% } %>
+                    </section>
+                    <h3><%= products[i].name %></h3>
+                    <div class="model">
+                        <p><%= products[i].model %></p>
+                        <p><%=products[i].brand %></p>
+                        <div>
+                            <p class="price">$ <%= products[i].price %></p>
+                            <p class="discount"><%= products[i].discount %> %OFF</p>
+                        </div>
+                        <p class="final-price"><%= finalPrice %></p>
+                    </div>
+                    <p class="description">
+                        <%= products[i].description %>
+                    </p>
+                    <div class="details-link"><a href="/product/detail/<%= products[i].id %>">Ver más</a>
+                    </div>
+                </article>
+                <% } %>
+            </div>
+            <%- include('partials/footer') %>
+        </main>
+    </body>
+</html>

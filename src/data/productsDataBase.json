@@ -1,0 +1,62 @@
+[
+ {
+  "id": 1,
+  "image": "image1631920301180.jpg"
+ },
+ {
+  "productName": "Casco Rockbros Ciclismo Ruta/montaña Ajustable 3 En 1 ",
+  "model": "3 en 1",
+  "brand": "Rockbros",
+  "category": "accessories",
+  "status": "new",
+  "colors": "Negro",
+  "price": "900",
+  "discount": "5",
+  "description": "Color: Negro.\r\nMás seguro en la conducción nocturna por sus correas reflejantes.\r\nAdecuado para ciclismo de carretera o montaña.\r\nReduce la resistencia al viento.\r\nPuede cambia entre cubiertas (incluidas).\r\n26 orificios de ventilación (sin tapa).\r\nTranspirable, absorbente Forro desmontable.\r\nMayor comodidad por su almohadilla para el mentón.\r\nHebilla de alta calidad.\r\nPeso: 251 g (sin cubierta)\r\nTamaño Ajustable: 57 - 62 cm.",
+  "image": "image1631922139239.jpg",
+  "id": 2
+ },
+ {
+  "productName": "Element Skateboard Bam Margera Trophy 8.25",
+  "model": " Bam Margera",
+  "bran": "Element",
+  "category": "skateboard",
+  "status": "new",
+  "colors": "único",
+  "price": "1,200",
+  "discount": 0,
+  "description": "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Ex illo soluta tenetur asperiores nostrum, voluptas necessitatibus iste eum quidem nemo cum magnam impedit suscipit saepe veniam cumque accusamus officia porro?",
+  "image": "image1631922887152.jpg",
+  "id": 3
+ },
+ {
+  "productName": "Element Skateboard Bam Margera Trophy 8.25",
+  "model": " Bam Margera",
+  "bran": "Element",
+  "category": "skateboard",
+  "status": "new",
+  "colors": "único",
+  "price": "1,200",
+  "discount": 0,
+  "description": "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Ex illo soluta tenetur asperiores nostrum, voluptas necessitatibus iste eum quidem nemo cum magnam impedit suscipit saepe veniam cumque accusamus officia porro?",
+  "image": "image1631922887152.jpg",
+  "id": 4
+ },
+ {
+  "productName": "Element Skateboard Bam Margera Trophy 8.25",
+  "model": " Bam Margera",
+  "bran": "Element",
+  "category": "skateboard",
+  "status": "new",
+  "colors": "único",
+  "price": "1,200",
+  "discount": 0,
+  "description": "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Ex illo soluta tenetur asperiores nostrum, voluptas necessitatibus iste eum quidem nemo cum magnam impedit suscipit saepe veniam cumque accusamus officia porro?",
+  "image": "image1631922887152.jpg",
+  "id": 5
+ },
+ {
+  "id": 6,
+  "image": "image1631922887152.jpg"
+ }
+]

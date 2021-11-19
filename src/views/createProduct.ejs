@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>Rodadamx</title>
+        <meta name= "viewport" content="width = device-width, initial-scale= 1">
+        <link rel="stylesheet" href="/css/styles.css">
+        <link rel="stylesheet" href="/css/createProduct.css">
+        <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet"/>
+        <link href="//db.onlinewebfonts.com/c/8d65e04904a1582f7e49f29c82eeda2d?family=Atlas+Grotesk+Web+Bold" rel="stylesheet" type="text/css"/>
+        <link href="//db.onlinewebfonts.com/c/43372a4ce8dc3abbca31595815be7cf3?family=Atlas+Grotesk+Web+Light" rel="stylesheet" type="text/css"/>
+    </head>
+    <body>
+        <%- include('partials/topHeader') %>
+        <main>
+            <center><h1>Crea producto</h1></center>
+            <form action="/product/create?_method=PUT" enctype= 'multipart/form-data' method="POST">
+                <hr><br>
+                <center><input class="main-input" type="text" name="name" placeholder="Nombre del producto:" required>
+                <input class="main-input" type="text" name="model" placeholder="Modelo:">
+                <input class="main-input" type="text" name="brand" placeholder="Marca:">
+                
+                <div class="category-section">
+                    <h3 class="category">Categoría:</h3>
+                        <select class="category-menu" name="category" id="category">
+                            <option value="bicycles">Bicicletas</option>
+                            <option value="bamboocycles">Bamboocycles</option>
+                            <option value="rollerskate">Patines</option>
+                            <option value="skateboard">Skateboard</option>
+                            <option value="accessories">Accesorios</option>
+                        </select>
+                </div>
+                <div>
+                    <h3 class="status">Status:</h3>
+                        <select class="status-section" name="status" id="status">
+                            <option value="new">Nuevo</option>
+                             <option value="in-sale">Rebaja</option>
+                            <option value="visited">Lo más visto</option>
+                        </select>
+                </div>
+                <div>
+                    <h3 class="size">Seleccione talla(s):</h3>
+                    <section class="size-section"> 
+                        <section>
+                            <input type="checkbox" name="size" value="10'' (1-4 años)"> 10'' (1-4 años)</label>
+                        </section>
+                        <section>
+                            <input type="checkbox" name="size" value="16'' (4-6 años)"> 16'' (4-6 años)</label>
+                        </section> 
+                        <section>
+                            <input type="checkbox" name="size" value="20'' (6-9 años)"> 20'' (6-9 años)</label>
+                        </section> 
+                        <section>
+                            <input type="checkbox" name="size" value="24'' (9-11 años)"> 24'' (9-11 años)</label>
+                        </section>
+                        <section>
+                            <input type="checkbox" name="size" value="26'' (11+ años)"> 26'' (11+ años)</label>
+                        </section> 
+                        <section>
+                            <input type="checkbox" name="size" value="27.5'' (155cms a 175cms)"> 27.5'' (155cms a 175cms)</label>
+                        </section> 
+                        <section>
+                            <input type="checkbox" name="size" value="29'' (160 en adelante)"> 29'' (160 en adelante)</label>
+                        </section>
+                        <input class="other-size" type="text" name="size" placeholder="Otra medida...">
+                </div>
+                <input class="color-section" type="text" name="colors" placeholder="Colores:">
+                <div class="cost-section">
+                    <input class="price-section" type="text" name="price" placeholder="Precio: ej. 12,000" required>
+                    <input class="discount-section" type="text" name="discount" placeholder="Descuento: ej. 30">
+                </div>
+                <section> 
+                    <textarea class="description" name="description" id="description" placeholder = "   Descripción:"></textarea>
+                </section>
+                <label for="image">Selecciona una imágen:</label>
+                <input class="upload-file" type="file" name="image" id="image" ><br>
+                <button class="create" type="submit">Crear</button>
+            </center> 
+            </form>
+            <%- include('partials/footer') %>
+        </main>
+    </body>
+</html>

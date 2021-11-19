@@ -1,0 +1,100 @@
+<header>
+    <div class="top-header">
+        <div class="bottom-header"> 
+            <a href="/">
+                <section class="logo">
+                    <img src="/img/logo.svg" alt="logo-rodadamx">
+                </section>
+            </a>
+            <div class="navbar">
+                <form action="/search" method="GET">
+                    <input type="text" name="keywords" placeholder="  Buscar "></i>
+                    <button></button>
+                </form>
+            </div>
+            <div class="profile-section"> 
+                <i class="fas fa-user-circle profile"></i>
+                <ul class="uservar ">
+                    <li><a href="/productCar">Mi carrito</a></li>
+                    <li><a href="/logout">Cerrar sesión</a></li>
+                </ul>
+            </div>
+        </div>
+        <nav class="login">
+            <ul class="login-1">
+                <% if(locals.isLogged){ %>
+                    <div>
+                        <img src="/img/products/<%= locals.userLogged.image%>" alt="profile-image">
+                    </div>
+                   <center> <p>Barra del Usuario: Hi 
+                    <%= locals.userLogged.firstName %>
+                    </p></center>
+                    
+                    <% } else { %>
+                <li ><a href = "/product/create" title="create-product"><i class="fas fa-plus"></i></a>|</li>
+                <li ><a href = "/productCar" title="Carrito" ><i class="fas fa-shopping-cart"></i></a>|</li>
+                <li><a href = "/register"><i class="fas fa-sign-in-alt"></i></a>|</li>
+                <li><a href = "/login"><i class="fas fa-portrait"></i></a>|</li>
+                <% } %>
+            </ul>
+            <ul class="login-2">
+                <% if(locals.isLogged){ %>
+                    <p>Barra del Usuario</p>
+                    <% } else { %>
+                <li ><a href = "/product/create" title="create" ><i class="fas fa-plus"></i></a>|</li>
+                <li><a href = "/productCar">Mi carrito<i class="fas fa-shopping-cart"></i></a></li>
+                <li><a href = "/register">Registro<i class="fas fa-sign-in-alt"></i></a></li>
+                <li><a href = "/login">Iniciar sesión<i class="fas fa-portrait"></i></a></li>
+                <% } %>
+            </ul>
+        </nav>
+    </div>
+    <div class="products">
+        
+        <nav class="product-list submenu">
+            <section class="arrow-list">
+                <!-- <i class="fas fa-caret-square-right more"></i> -->
+                <i class="fas fa-chevron-circle-right more"></i>
+                <!-- <i class="fas fa-angle-double-right more"></i> -->
+                <!-- <i class="fas fa-dot-circle more"></i> -->
+            </section>
+            <ul class="">
+                <li><a href="/products">Todos los productos</a></li>
+                <li><a href="#"></a>Bicicletas</li>
+                <li><a href="#"></a>Bamboocycles</li>
+                <li><a href="#"></a>Patines</li>
+                <li><a href="#"></a>Patinetas</li>
+                <li><a href="#"></a>Accesorios</li>
+                <li><a href="#"></a>Rebajas</li>
+            </ul>
+        </nav>
+        <nav class="product-list-2">
+            <ul>
+                <li><a href="/products">Todos los productos</a></li>
+                <li><a href="#"></a>Bicicletas</li>
+                <li><a href="#"></a>Bamboocycles</li>
+                <li><a href="#"></a>Patines</li>
+                <li><a href="#"></a>Patinetas</li>
+                <li><a href="#"></a>Accesorios</li>
+                <li><a href="#"></a>Rebajas</li>
+            </ul>
+        </nav>
+    </div> 
+</header>
+
+<script>
+ window.onload = init;
+    function init(){
+        document.querySelectorAll(".more")[0].addEventListener("click",submenu);
+        document.querySelector(".submenu > ul").style.display = "none"; 
+    }
+    
+    function submenu(){
+        var estado = document.querySelector(".submenu > ul").style.display;
+        if (estado == "none"){
+            document.querySelector(".submenu > ul").style.display = "block";
+        }else{
+            document.querySelector(".submenu > ul").style.display = "none";            
+        };
+    }
+</script>

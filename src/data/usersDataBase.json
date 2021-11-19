@@ -1,0 +1,77 @@
+[
+ {
+  "productName": "Bicicleta Vintage Loving Monk Loving Urbana",
+  "model": "Loving",
+  "brand": "Monk",
+  "category": "bicycles",
+  "status": "new",
+  "size": "24'' (9-11 años)",
+  "colors": "",
+  "price": "6,500.00",
+  "discount": "10",
+  "description": "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Ex illo soluta tenetur asperiores nostrum, voluptas necessitatibus iste eum quidem nemo cum magnam impedit suscipit saepe veniam cumque accusamus officia porro?",
+  "image": "image1631920301180.jpg",
+  "id": 1
+ },
+ {
+  "firstName": "iSRAEL   ",
+  "lastName": "ROSILLO   ",
+  "email": "israeljonathanroma@outlook.com",
+  "password": "1234",
+  "category": "usuario",
+  "image": "hola.jsp",
+  "id": 1
+ },
+ {
+  "firstName": "iSRAEL   ",
+  "lastName": "ROSILLO   ",
+  "email": "israeljonathanroma@outlook.com",
+  "password": "1234",
+  "category": "usuario",
+  "image": "hola.jsp",
+  "id": 2
+ },
+ {
+  "firstName": "ISRAEL",
+  "lastName": "MARTINEZ",
+  "email": "israeljonathanroma@outlook.com",
+  "password": "1234",
+  "category": "administrador",
+  "image": "image1632460599992.jpg",
+  "id": 3
+ },
+ {
+  "firstName": "Mono",
+  "lastName": "T",
+  "email": "mono123@gmail",
+  "password": "$2a$10$96Y2sV.97PBT/QWUt/FnjOatr2IehjvtwBa9NDaIbOVfH2wCojx6K",
+  "category": "administrador",
+  "image": "default-img.png",
+  "id": 4
+ },
+ {
+  "id": 5,
+  "firstName": "Mono",
+  "lastName": "S",
+  "email": "mono123@gmail.com",
+  "password": "$2a$10$UgSeAmZZ4dnRIhPNtYat6.HR/am4KL8jmJsccXC9yuL0JgoDkvMXq",
+  "category": "usuario"
+ },
+ {
+  "id": 6,
+  "firstName": "Prueba",
+  "lastName": "S",
+  "email": "prueba123@gmail.com",
+  "password": "$2a$10$pyc8T9rrQU2uxug75/BomOKVC7zE5d1XfGdO21GfwmIrLrqlM..By",
+  "category": "usuario"
+ },
+ {
+  "id": 7,
+  "firstName": "Israel",
+  "lastName": "Martinez",
+  "email": "jonikratoos@gmail.com",
+  "password": "$2a$10$DPND2PgzKVIIbfRJrsW7fOaJFtHgyODZf8MnpyWxoH/jd3Wx8fF9.",
+  "category": "usuario",
+  "image": "image1637115414266.png"
+ }
+]
