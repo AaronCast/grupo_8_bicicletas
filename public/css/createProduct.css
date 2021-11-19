@@ -1,0 +1,114 @@
+* {
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+
+main{
+    font-family: 'Atlas Grotesk Web Bold';
+    color: #474747;
+    margin-top: 30px;
+}
+
+input.main-input{
+    margin-bottom: 10px;
+    font-size: 16px;
+    padding-left: 10px;
+    width: 65%;
+    border: solid 3px #474747;
+    border-radius: 10px;
+    height: 30px;
+}
+input::placeholder{
+    font-family: 'Atlas Grotesk Web Bold';
+}
+
+select.category-menu{
+    cursor: pointer;
+    color: #474747;
+    width: 46%;
+    font-family: 'Atlas Grotesk Web Bold';
+    font-size: 16px;
+    border-radius: 10px;
+    border: solid;
+}
+select.status-section{
+    cursor: pointer;
+    color: #474747;
+    width: 46%;
+    font-family: 'Atlas Grotesk Web Bold';
+    font-size: 16px;
+    border-radius: 10px;
+    border: solid;
+}
+section.size-section{
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    align-content: center;
+    align-items: flex-start;
+    margin-bottom: 25px;
+}
+input.other-size{
+    cursor: pointer;
+    color: #474747;
+    width: 46%;
+    font-family: 'Atlas Grotesk Web Bold';
+    font-size: 16px;
+    border-radius: 10px;
+    border: solid;
+    align-self: center;
+}
+input[type="checkbox" i]{
+
+}
+
+input.color-section{
+    cursor: pointer;
+    color: #474747;
+    width: 46%;
+    font-family: 'Atlas Grotesk Web Bold';
+    font-size: 16px;
+    border-radius: 10px;
+    border: solid;
+    align-self: center;
+    margin-bottom: 30px;
+}
+input.price-section, input.discount-section{
+    cursor: pointer;
+    color: #474747;
+    width: 48%;
+    font-family: 'Atlas Grotesk Web Bold';
+    font-size: 16px;
+    border-radius: 10px;
+    border: solid;
+    align-self: center;
+    margin-bottom: 30px;
+}
+textarea.description{
+    width: 90%;
+    height: 180px;
+    border: solid 1px #474747;
+    border-radius: 10px;
+    font-family: 'Atlas Grotesk Web Bold';
+    font-size: 25px;
+    margin-bottom: 30px;
+}
+input.upload-file{
+    width: 46%;
+    margin-bottom: 30px;
+}
+button.create{
+    font-family: 'Atlas Grotesk Web Bold';
+    background-color: #b72347;
+    width: 62%;
+    height: 56px;
+    color: white;
+    font-size: 30px;
+    border: none;
+    border-radius: 15px;
+}
+
+nav.product-list-2{
+    display: none;
+}
