@@ -88,6 +88,10 @@ div.profile-section{
     width: 40px;
     color: #474747;
 }
+div.profile-image img{
+    width: 40px;
+    border-radius: 50%;
+}
 div.profile-section i{
     font-size: 30px;
 }

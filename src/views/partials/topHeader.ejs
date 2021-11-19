@@ -12,12 +12,24 @@
                     <button></button>
                 </form>
             </div>
-            <div class="profile-section"> 
-                <i class="fas fa-user-circle profile"></i>
-                <ul class="uservar ">
-                    <li><a href="/productCar">Mi carrito</a></li>
-                    <li><a href="/logout">Cerrar sesión</a></li>
-                </ul>
+            <div class="profile-section">
+                <% if(locals.isLogged) { %>
+                    <div class="image-profile">
+                        <img src="/img/usuarios/<%= locals.userLogged.image %>" alt="profile-image">
+                    </div>
+                    <ul class="uservar ">
+                        <li><a href="/user/profile">Mi perfil</a></li>
+                        <li><a href="/productCar">Mi carrito</a></li>
+                        <li><a href="/logout">Cerrar sesión</a></li>
+                    </ul>
+                <% } else { %>
+                    <i class="fas fa-user-circle profile"></i>
+                    <ul class="uservar ">
+                        <li><a href="/login">Iniciar sesión</a></li>
+                        <li><a href="/register">Registrarse</a></li>
+                    </ul>
+                <% } %>
+                
             </div>
         </div>
         <nav class="login">
@@ -97,4 +109,4 @@
             document.querySelector(".submenu > ul").style.display = "none";            
         };
     }
-</script>
+</script> 

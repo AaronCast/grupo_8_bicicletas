@@ -3,15 +3,17 @@ window.addEventListener('load', (e) => {
     let indexMenu = document.querySelector('.submenu ul');
 
     indexMenu.style.display = 'none'
+  
     
     indexArrow.addEventListener('click', (e) => {
+       
         let menuOff = indexMenu.style.display = 'none';
         let menuOn = indexMenu.style.display = 'block'
         menuOff
-        if(menuOn){
-            menuOff
-        }else{
+        if(menuOff){
             menuOn
+        }else{
+            menuOff
         }
         console.log(e)
         

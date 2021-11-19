@@ -37,12 +37,12 @@ const usersController = {
         let userToCreate = {
             ...req.body,
             password: bcrypt.hashSync(req.body.password, 10),
-            // image: req.file.filename
+            image: req.file.filename
 
         }
         
-        if(req.files[0] != undefined){
-            image = req.files[0].filename
+        if(req.file[0] != undefined){
+            image = req.file[0].filename
         } else{
             image = 'default-img.png'
         };

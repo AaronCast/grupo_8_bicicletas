@@ -55,7 +55,8 @@
   "lastName": "S",
   "email": "mono123@gmail.com",
   "password": "$2a$10$UgSeAmZZ4dnRIhPNtYat6.HR/am4KL8jmJsccXC9yuL0JgoDkvMXq",
-  "category": "usuario"
+  "category": "usuario",
+  "image": "product-2.jpg"
  },
  {
   "id": 6,
@@ -64,5 +65,14 @@
   "email": "prueba123@gmail.com",
   "password": "$2a$10$pyc8T9rrQU2uxug75/BomOKVC7zE5d1XfGdO21GfwmIrLrqlM..By",
   "category": "usuario"
+ },
+ {
+  "id": 7,
+  "firstName": "Monkey",
+  "lastName": "T",
+  "email": "monkey123@gmail.com",
+  "password": "$2a$10$YLThDGmiCOjI7XIiV5yv/.ETLLF0w65T62dQuCGy7KNblLJJg6dOu",
+  "category": "usuario",
+  "image": "image1637276787747.jpg"
  }
 ]

@@ -12,7 +12,7 @@ const guestMiddleware = require('../middlewares/guestMiddleware');
 const authMiddleware = require('../middlewares/authMiddleware');
 
 
-router.put('/create-user',uploadFileRegister.any('image'), validations, usersController.create);
+router.put('/create-user',uploadFileRegister.single('image'), validations, usersController.create);
 router.get('/login', guestMiddleware, usersController.login);
 router.post('/login', usersController.processLogin);
 router.get('/user/profile', authMiddleware, usersController.profile);
