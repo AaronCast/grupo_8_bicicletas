@@ -14,17 +14,17 @@
             </div>
             <div class="profile-section">
                 <% if(locals.isLogged) { %>
-                    <div class="image-profile">
+                    <div class="userImageProfile">
                         <img src="/img/usuarios/<%= locals.userLogged.image %>" alt="profile-image">
                     </div>
-                    <ul class="uservar ">
+                    <ul class="userSection">
                         <li><a href="/user/profile">Mi perfil</a></li>
                         <li><a href="/productCar">Mi carrito</a></li>
                         <li><a href="/logout">Cerrar sesión</a></li>
                     </ul>
                 <% } else { %>
-                    <i class="fas fa-user-circle profile"></i>
-                    <ul class="uservar ">
+                    <i class="fas fa-user-circle logoProfile"></i>
+                    <ul class="loginSection">
                         <li><a href="/login">Iniciar sesión</a></li>
                         <li><a href="/register">Registrarse</a></li>
                     </ul>
@@ -70,7 +70,7 @@
                 <!-- <i class="fas fa-angle-double-right more"></i> -->
                 <!-- <i class="fas fa-dot-circle more"></i> -->
             </section>
-            <ul class="">
+            <ul class="topList">
                 <li><a href="/products">Todos los productos</a></li>
                 <li><a href="#"></a>Bicicletas</li>
                 <li><a href="#"></a>Bamboocycles</li>
@@ -93,7 +93,7 @@
         </nav>
     </div> 
 </header>
-
+<!-- 
 <script>
  window.onload = init;
     function init(){
@@ -109,4 +109,4 @@
             document.querySelector(".submenu > ul").style.display = "none";            
         };
     }
-</script> 
+</script>  -->

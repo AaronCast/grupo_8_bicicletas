@@ -6,6 +6,7 @@
         <meta name= "viewport" content="width = device-width, initial-scale= 1">
         <link rel="stylesheet" href="/css/styles.css">
         <link rel="stylesheet" href="/css/login.css">
+        <link rel="stylesheet" href="/css/userProfile.css">
         <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet"/>
         <link href="//db.onlinewebfonts.com/c/8d65e04904a1582f7e49f29c82eeda2d?family=Atlas+Grotesk+Web+Bold" rel="stylesheet" type="text/css"/>
         <link href="//db.onlinewebfonts.com/c/43372a4ce8dc3abbca31595815be7cf3?family=Atlas+Grotesk+Web+Light" rel="stylesheet" type="text/css"/>
@@ -13,10 +14,15 @@
     <body>
        <%- include('partials/topHeader') %>
 
-        <main class="login">
-            <div class="profile-logo">
-            <i class="fas fa-user-circle"></i>
-            </div>
+        <main class="user-profile">
+            <center>
+                <h1 class="user-name">
+                    Bienvenido  <%= locals.userLogged.firstName %> <%= locals.userLogged.lastName %>
+
+                <div class="profile-img">
+                    <img src="/img/usuarios/<%= locals.userLogged.image %>" alt="">
+                </div>
+            </center> 
             <h3>¿No eres miembro?<a class="register" href="#">Regístrate</a></h3>
             <div class="main-form">
                 <form action="/login" method="POST">

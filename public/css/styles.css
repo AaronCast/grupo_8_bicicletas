@@ -46,6 +46,7 @@ div.bottom-header{
 }
 
 div.bottom-header {
+    height: 130px;
     background-color: #6274752b;
     align-items: center;
     display: flex;
@@ -88,9 +89,20 @@ div.profile-section{
     width: 40px;
     color: #474747;
 }
-div.profile-image img{
+div.userImageProfile img{
     width: 40px;
     border-radius: 50%;
+}
+ul.loginSection{
+    list-style: none;
+}
+ul.loginSection a{
+    margin-bottom: 2px;
+    text-decoration: none;
+    color: #474747;
+    font-family: 'Atlas Grotesk Web Bold';
+    font-size: 13px;
+
 }
 div.profile-section i{
     font-size: 30px;
@@ -127,6 +139,8 @@ nav.product-list ul{
     display: block;
     border-left: solid rgb(183, 35, 71);
 }
+
+
 nav.product-list ul a{
     text-decoration: none;
     color: #474747;
