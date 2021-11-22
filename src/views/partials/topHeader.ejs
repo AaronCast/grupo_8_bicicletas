@@ -14,9 +14,17 @@
             </div>
             <div class="profile-section">
                 <% if(locals.isLogged) { %>
+                    <% if(locals.userLogged.image !== null) { %>
                     <div class="userImageProfile">
                         <img src="/img/usuarios/<%= locals.userLogged.image %>" alt="profile-image">
+                        <i class="fas fa-sort-down"></i>
                     </div>
+                <% }else{ %>
+                    <div class="userImageProfile">
+                        <i class="fas fa-user-circle logoProfile"></i>
+                    </div>
+                <% } %>
+                      
                     <ul class="userSection">
                         <li><a href="/user/profile">Mi perfil</a></li>
                         <li><a href="/productCar">Mi carrito</a></li>
@@ -35,18 +43,12 @@
         <nav class="login">
             <ul class="login-1">
                 <% if(locals.isLogged){ %>
-                    <div>
-                        <img src="/img/products/<%= locals.userLogged.image%>" alt="profile-image">
-                    </div>
-                   <center> <p>Barra del Usuario: Hi 
-                    <%= locals.userLogged.firstName %>
-                    </p></center>
-                    
+                   <center>
+                       <p> Bienvenido <%= locals.userLogged.firstName %></p>
+                    </center>
                     <% } else { %>
                 <li ><a href = "/product/create" title="create-product"><i class="fas fa-plus"></i></a>|</li>
                 <li ><a href = "/productCar" title="Carrito" ><i class="fas fa-shopping-cart"></i></a>|</li>
-                <li><a href = "/register"><i class="fas fa-sign-in-alt"></i></a>|</li>
-                <li><a href = "/login"><i class="fas fa-portrait"></i></a>|</li>
                 <% } %>
             </ul>
             <ul class="login-2">

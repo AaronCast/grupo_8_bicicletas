@@ -51,7 +51,7 @@ div.bottom-header {
     align-items: center;
     display: flex;
     flex-direction: row;
-    padding: 20px;
+    padding: 0px 24px 40px 0px;
     justify-content: space-between;
     background-image: url('/img/1back.jpg');
 }
@@ -68,7 +68,7 @@ section.logo{
 div.navbar input{
     border: 3.5px solid #474747;
     border-radius: 10px;
-    width: 85%;
+    width: 70%;
     position: relative;
     background-color: #e8e0e06b;
 }
@@ -94,7 +94,17 @@ div.userImageProfile img{
     border-radius: 50%;
 }
 ul.loginSection{
+    right: 1%;
+    top: 10%;
+    position: absolute;
+    z-index: 7;
+    display: flex;
     list-style: none;
+    flex-direction: column;
+    text-align: right;
+}
+ul.loginSection li{
+    margin-top: 1px;
 }
 ul.loginSection a{
     margin-bottom: 2px;
@@ -106,6 +116,16 @@ ul.loginSection a{
 }
 div.profile-section i{
     font-size: 30px;
+}
+div.userImageProfile{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+}
+div.userImageProfile i{
+    font-size: 20px;
+    padding-top: 22px;
+    color: #474747 ;
 }
 nav.product-list-2{
     display: none;
