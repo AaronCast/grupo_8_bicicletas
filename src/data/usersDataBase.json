@@ -74,5 +74,13 @@
   "password": "$2a$10$YLThDGmiCOjI7XIiV5yv/.ETLLF0w65T62dQuCGy7KNblLJJg6dOu",
   "category": "usuario",
   "image": "image1637276787747.jpg"
+ },
+ {
+  "id": 8,
+  "firstName": "Prueba",
+  "lastName": "P",
+  "email": "pruebas123@gmail.com",
+  "password": "$2a$10$U9re6bWxlrAKO2/9gn/3zezpZysOitWBHiunSY.6zz4GncaEbDhCG",
+  "category": "usuario"
  }
 ]

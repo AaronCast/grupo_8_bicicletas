@@ -14,7 +14,7 @@
             </div>
             <div class="profile-section">
                 <% if(locals.isLogged) { %>
-                    <% if(locals.userLogged.image !== null) { %>
+                    <% if(locals.userLogged.image) { %>
                     <div class="userImageProfile">
                         <img src="/img/usuarios/<%= locals.userLogged.image %>" alt="profile-image">
                         <i class="fas fa-sort-down"></i>

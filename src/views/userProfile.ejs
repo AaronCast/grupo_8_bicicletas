@@ -18,10 +18,16 @@
             <center>
                 <h1 class="user-name">
                     Bienvenido  <%= locals.userLogged.firstName %> <%= locals.userLogged.lastName %>
-
-                <div class="profile-img">
+                </h1>
+                <% if(locals.userLogged.image) { %>
                     <img src="/img/usuarios/<%= locals.userLogged.image %>" alt="">
                 </div>
+                <% } else { %>
+                    <div class="profile-img">
+                        <i class="fas fa-user-circle logoProfile"></i>
+                    </div>
+                <% } %>
+                <div class="profile-img">
             </center> 
             <h3>¿No eres miembro?<a class="register" href="#">Regístrate</a></h3>
             <div class="main-form">
