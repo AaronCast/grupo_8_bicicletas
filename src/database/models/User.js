@@ -1,7 +1,7 @@
 module.exports = (sequelize, DataTypes) => {
     let alias = 'User';
     let cols = {
-        id_users: {
+        id: {
             type: DataTypes.INTEGER,
             primaryKey: true,
             allowNull: false,
@@ -19,9 +19,13 @@ module.exports = (sequelize, DataTypes) => {
         user_password: {
             type: DataTypes.STRING
         },
-        user_image: {
-            type: DataTypes.STRING
+        license: {
+            type: DataTypes.INTEGER
         },
+        image: {
+            type: DataTypes.STRING
+        }
+        
     };
     let config = {
         tableName: 'users',
@@ -30,5 +34,14 @@ module.exports = (sequelize, DataTypes) => {
     const User = sequelize.define(
         alias, cols, config
     );
+
+    // User.associate = function(models){
+    //     User.belongsTo(models.License, {
+    //         as:'licenses',
+    //         foreingKey: 'id_license'
+    //     })
+    // }
+
+
     return User;
 };

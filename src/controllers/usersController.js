@@ -3,17 +3,18 @@ const db = require('../database/models');
 const {validationResult} = require('express-validator');
 const bcrypt = require('bcryptjs');
 const path = require('path');
-const User = require('../model/UserJSON');
+// const User = require('../model/UserJSON');
 
 const usersFilePath = path.join(__dirname, '../data/usersDataBase.json');
 const users = JSON.parse(fs.readFileSync(usersFilePath, 'utf-8'));
 
-// const Users = db.User;
+const Users = db.User;
 
 const usersController = {
     create: (req, res) => {
        
         const resultValidation = validationResult(req);
+        console.log(resultValidation);
 
         if (resultValidation.errors.length > 0) {
             return res.render('register', {
@@ -21,33 +22,59 @@ const usersController = {
                 oldData: req.body
             });
         }
-        
-        let userInDB = User.findByField('email', req.body.email);
-    
-        if (userInDB) {
-            return res.render('register', {
-                errors: {
-                email: {
-                    msg: 'Este email ya está registrado'
-                }},
+
+         Users.findAll({
+             where: {email: req.body.email}
+         })
+         .then(() => {
+             return res.render('register', {
+                 errors: {
+                 email: {
+                       msg: "Email registrado"
+                     }},
                     oldData: req.body
-                });
-        }
-        let image
-        let userToCreate = {
-            ...req.body,
-            password: bcrypt.hashSync(req.body.password, 10),
-            image: image
-        }
+             });
+        })
+
+        // let userInDB = Users.findByField('email', req.body.email);
+    
+        // if (userInDB) {
+        //     return res.render('register', {
+        //         errors: {
+        //         email: {
+        //             msg: 'Este email ya está registrado'
+        //         }},
+        //             oldData: req.body
+        //         });
+        // }
+        req.file ? userImage = req.file.filename : userImage = "default-user.png";
+        Users.create({
+            first_name: req.body.firstName,
+            last_name: req.body.lastName,
+            email: req.body.email,
+            user_password: bcrypt.hashSync(req.body.password, 10),
+            license: req.body.category,
+            image: userImage
+        })
+        .then(() => {
+            console.log(req.file)
+            return res.redirect('/')
+        } )
+        // let image
+        // let userToCreate = {
+        //     ...req.body,
+        //     password: bcrypt.hashSync(req.body.password, 10),
+        //     image: image
+        // }
         
-        if(req.file !== undefined){
+        if(req.files !== undefined){
             image = req.file.filename
         } else{
             image = 'default-img.png'
         };
-        let userCreated = User.create(userToCreate);
+        // let userCreated = User.create(userToCreate);
           
-        return res.redirect('/login');
+        // return res.redirect('/login');
     }, 
     login: (req, res) => {
         return res.render('login.ejs');
