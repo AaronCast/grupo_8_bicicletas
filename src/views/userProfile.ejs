@@ -17,28 +17,18 @@
         <main class="user-profile">
             <center>
                 <h1 class="user-name">
-                    Bienvenido  <%= locals.userLogged.firstName %> <%= locals.userLogged.lastName %>
+                    Bienvenido  <%= locals.userLogged.first_name %> <%= locals.userLogged.last_name %>
                 </h1>
-                <% if(locals.userLogged.image) { %>
+                <div class="profile-img">
                     <img src="/img/usuarios/<%= locals.userLogged.image %>" alt="">
                 </div>
-                <% } else { %>
-                    <div class="profile-img">
-                        <i class="fas fa-user-circle logoProfile"></i>
-                    </div>
-                <% } %>
-                <div class="profile-img">
             </center> 
-            <h3>¿No eres miembro?<a class="register" href="#">Regístrate</a></h3>
-            <div class="main-form">
-                <form action="/login" method="POST">
-                    <input type="email" name="email" placeholder="   Email:" required>
-                    <!-- pattern="^(?=.*[A-Za-z])(?=.*\d)(?=.*[@$!%*#?&])[A-Za-z\d@$!%*#?&]{8,}$"  -->
-                    <input type="password" name="password" placeholder="  Contraseña" required>
-                    <button class="sign-in" type="submit">Ingresa</button>
-                
-                </form>
-                <a class="recover-password" href="#">Olvidaste tu contraseña</a>
+           
+            <div>
+                <a href="/">Ir a Inicio</a>
+            </div>
+            <div>
+                <a href="#">Editar pefil</a>
             </div>
         </main>
         <%- include('partials/footer') %>

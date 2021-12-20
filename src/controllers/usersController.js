@@ -3,6 +3,7 @@ const db = require('../database/models');
 const {validationResult} = require('express-validator');
 const bcrypt = require('bcryptjs');
 const path = require('path');
+const User = require('../database/models/User');
 // const User = require('../model/UserJSON');
 
 const usersFilePath = path.join(__dirname, '../data/usersDataBase.json');
@@ -20,7 +21,7 @@ const usersController = {
             return res.render('register', {
                 errors: resultValidation.mapped(),
                 oldData: req.body
-            });
+            })
         }
 
          Users.findAll({
@@ -52,14 +53,15 @@ const usersController = {
             first_name: req.body.firstName,
             last_name: req.body.lastName,
             email: req.body.email,
-            user_password: bcrypt.hashSync(req.body.password, 10),
+            password: bcrypt.hashSync(req.body.password, 10),
             license: req.body.category,
             image: userImage
         })
         .then(() => {
             console.log(req.file)
             return res.redirect('/')
-        } )
+        })
+        .catch(error => res.send(error))
         // let image
         // let userToCreate = {
         //     ...req.body,
@@ -67,11 +69,11 @@ const usersController = {
         //     image: image
         // }
         
-        if(req.files !== undefined){
-            image = req.file.filename
-        } else{
-            image = 'default-img.png'
-        };
+        // if(req.files !== undefined){
+        //     image = req.file.filename
+        // } else{
+        //     image = 'default-img.png'
+        // };
         // let userCreated = User.create(userToCreate);
           
         // return res.redirect('/login');
@@ -81,27 +83,65 @@ const usersController = {
         
     },
     processLogin: (req, res) => {
-        let errors = validationResult(req);
-        console.log(errors);
 
-        let userToLog = users.find(user => user.email == req.body.email);
        
-        if(userToLog){
-            let validPassword = bcrypt.compareSync(req.body.password, userToLog.password);
-            if(validPassword){
-                delete userToLog.password;
+        
+        let email = req.body.email;
+        let password = req.body.password;
+
+        Users.findOne({
+            where: {email: email}
+        })
+        .then(userToLog => {
+            console.log(userToLog);
+            if(userToLog == null){
+                res.render('login.ejs', {email: {msg: 'Correo no registrado'}}
+            )
+        }else{
+            let validPassword = bcrypt.compareSync(password, userToLog.password);
+            console.log(validPassword)
+            if(!validPassword){
+                res.render('login.ejs', {password: {msg: 'Contraseña Incorrecta'}}
+                )
+            }else{
                 req.session.userLogged = userToLog;
-                if(req.body.remember){
-                    res.cookie('userEmail', req.body.email, {maxAge: (1000 * 60) * 10  })
-
+                delete userToLog.password;
+                if(req.body.remenber){
+                    res.cookie('userEmail', userToLog.email, {maxAge: (1000 * 60) * 10})
                 }
+                return res.redirect('/');
 
-                return res.redirect('user/profile');
             }
-            return res.render('login', {
-            errors: {email: {msg: 'Credenciales Inválidas'}}
-            });
         }
+        })
+        .catch(error => res.send(error))
+
+           
+            // return res.render('/login', {
+            //     errors: {email: {msg: 'Credenciales Inválidas'}}
+            // })
+
+
+
+
+        // let userToLog = users.find(user => user.email == req.body.email);
+       
+        // if(userToLog){
+        //     let validPassword = bcrypt.compareSync(req.body.password, userToLog.password);
+        //     if(validPassword){
+        //         delete userToLog.password;
+        //         req.session.userLogged = userToLog;
+        //         if(req.body.remember){
+        //             res.cookie('userEmail', req.body.email, {maxAge: (1000 * 60) * 10  })
+
+        //         }
+
+        //         return res.redirect('user/profile');
+        //     }
+        //     return res.render('login', {
+        //     errors: {email: {msg: 'Credenciales Inválidas'}}
+        //     });
+        // }
         
 
         // if(errors.isEmpty()){

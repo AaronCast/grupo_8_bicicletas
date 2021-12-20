@@ -19,10 +19,15 @@
             </div>
             <h3>¿No eres miembro?<a class="register" href="/register">Regístrate</a></h3>
             <div class="main-form">
-                <form action="/login" method="POST">          
-                   
+                <form action="/login" method="POST">
+                    <% if(locals.email) { %>
+                        <div style="color: red;"> <%= email.msg %> </div>
+                    <% } %>         
                     <input type="email" name="email" placeholder="   Email:" required>
                     <!-- pattern="^(?=.*[A-Za-z])(?=.*\d)(?=.*[@$!%*#?&])[A-Za-z\d@$!%*#?&]{8,}$"  -->
+                    <% if(locals.password) { %>
+                        <div style="color: red;"> <%= password.msg %> </div>
+                    <% } %>   
                     <input type="password" name="password" placeholder="  Contraseña" required>
                     <button class="sign-in" type="submit">Ingresa</button>
                     <div class= 'error'>

@@ -44,7 +44,7 @@
             <ul class="login-1">
                 <% if(locals.isLogged){ %>
                    <center>
-                       <p> Bienvenido <%= locals.userLogged.firstName %></p>
+                       <p> Bienvenido <%= locals.userLogged.first_name %></p>
                     </center>
                     <% } else { %>
                 <li ><a href = "/product/create" title="create-product"><i class="fas fa-plus"></i></a>|</li>
